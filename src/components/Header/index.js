@@ -13,10 +13,10 @@ const Header = () => {
             </div>
             <div className='container-icons' >
             <img className='profile-icon'  src={iconProfile} alt='ícone perfil'/>
-            <img src={iconNotification} alt='ícone notificação'/>
+            <img className='icon-notification' src={iconNotification} alt='ícone notificação'/>
             </div>
         </div>
     )
 }
 
-export default Header
+export default Header;
