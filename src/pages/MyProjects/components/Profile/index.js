@@ -1,4 +1,4 @@
-import iconProfileLarge from '../../assets/img/icon-profile-large.png'
+import iconProfileLarge from '../../../../assets/img/icon-profile-large.png'
 import './styles.css'
 
 const Profile = () => {

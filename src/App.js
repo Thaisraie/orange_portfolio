@@ -1,17 +1,8 @@
-import logo from './logo.svg';
-import Header from './components/Header';
-import Profile from './components/Profile';
-import MyProjects from './components/MyProjects';
-
+import MyProjects from "./pages/MyProjects";
 
 function App() {
   return (
-  <div>
-    <Header/>
-    <Profile/>
     <MyProjects/>
-  </div>    
-    
   );
 }
 

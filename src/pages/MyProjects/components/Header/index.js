@@ -1,6 +1,6 @@
-import iconHeader from '../../assets/img/icon-header.png'
-import iconProfile from '../../assets/img/icon-profile.png'
-import iconNotification from '../../assets/img/icon-notification.png'
+import iconHeader from '../../../../assets/img/icon-header.png'
+import iconProfile from '../../../../assets/img/icon-profile.png'
+import iconNotification from '../../../../assets/img/icon-notification.png'
 import './styles.css'
 
 const Header = () => {

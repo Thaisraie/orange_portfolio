@@ -1,7 +1,7 @@
-import IconImg from '../../assets/img/icon-img.png'
+import IconImg from '../../../../assets/img/icon-img.png'
 import './styles.css'
 
-const MyProjects = () => {
+const CreateProjects = () => {
     return (
         <div className='my-projects'>
             <h1 className='my-projects-title'>Meus projetos</h1>
@@ -17,4 +17,4 @@ const MyProjects = () => {
     )
 }
 
-export default MyProjects;
+export default CreateProjects;
