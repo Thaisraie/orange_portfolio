@@ -23,9 +23,9 @@ const closeModalFunction = () => {
                 <div className='text-container'>
                 <p className='first-text'>Adicione seu primeiro projeto</p>
                 <p className='second-text'>Compartilhe seu talento com milhares de pessoas</p>
-                </div>
+                </div>  
             </div>
-            {openModal === true && <Modal closeModal={closeModalFunction}/> }
+            {openModal === true ? <Modal closeModal={closeModalFunction}/> : null}
         </div>
     )
 }

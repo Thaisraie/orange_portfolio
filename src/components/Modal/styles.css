@@ -49,6 +49,14 @@
     flex-direction: column;
 }
 
+.img-file {
+    width: 389px;
+    height: 298px;
+    border-radius: 4px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
 .box-img-container {
     cursor: pointer;
     background-color: #E6E9F2;
@@ -74,6 +82,10 @@
     font-weight: 500;
     margin-top: 17px;
     width: 85%;
+}
+
+input[type="file"] {
+    display: none;
 }
 
 .second-column {
