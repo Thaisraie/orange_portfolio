@@ -1,5 +1,5 @@
 
-export default function ScreenLogin(){
+export default function Login(){
     return (
         <>
         

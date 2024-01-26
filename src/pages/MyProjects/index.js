@@ -2,14 +2,12 @@ import Header from '../../components/Header';
 import Profile from './components/Profile';
 import CreateProjects from './components/CreateProjects';
 
-const MyProjects = () => {
+export default function MyProject() {
     return (
-        <div>
+        <>
         <Header/>
         <Profile/>
         <CreateProjects/>
-      </div>   
+      </>   
     )
 }
-
-export default MyProjects;

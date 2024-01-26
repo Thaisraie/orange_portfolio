@@ -1,5 +1,5 @@
 
-export default function ScreenRegister (){
+export default function SignUp (){
     return(
         <>
         
