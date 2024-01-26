@@ -1,16 +1,27 @@
 import {useState } from 'react'
+import ViewModal from './components/ViewModal'
 import IconImg from '../../assets/img/icon-img.png'
 import './styles.css'
 
 const Modal = ({closeModal}) => {
 
 const [fileImg, setFileImg] = useState(null)
+const [openViewModal, setOpenViewModal] = useState(false)
 
 const handleFileImg = (e) => {
     if(e.target.files) {
         setFileImg(URL.createObjectURL(e.target.files[0]));
     }
 }
+
+const openViewModalFunction = () => {
+    setOpenViewModal(true)
+}
+
+const closeViewModalFunction = () => {
+    setOpenViewModal(false)
+}
+
 
     return (
         <div className="background" >
@@ -39,11 +50,12 @@ const handleFileImg = (e) => {
                 </div>
                 </div>
                 <div className='button-container' >
-                <p className='subtitle-modal'>Visualizar publicação</p>
+                <p className='view-text' onClick={() => {openViewModalFunction()}} >Visualizar publicação</p>
                 <button className='primary-button'>Salvar</button>
                 <button onClick={() => closeModal()} className='second-button'>Cancelar</button>
                 </div>
             </div>
+            {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction}/> : null}
         </div>
     )
 }

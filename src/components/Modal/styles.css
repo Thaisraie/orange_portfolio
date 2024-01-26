@@ -152,3 +152,10 @@ input[type="file"] {
     margin: 0 14px;
     cursor: pointer;
 }
+
+.view-text {
+    color: #515255;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}

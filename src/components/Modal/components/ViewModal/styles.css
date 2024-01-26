@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: Roboto;
+}
+
+.background-view-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.view-modal-container {
+    padding: 0 30px 15px;
+    width: 1042px;
+    height: 450px;
+    background-color: #FEFEFE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+    margin-top: 50px;
+}
+
+.icon-close-container {
+    width: 101%;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.icon-close {
+    position: absolute;
+    margin-top: 41%;
+    cursor: pointer;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 55%;
+    padding: 0 92px;
+    margin-bottom: 18px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.info-column {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #303133;
+    margin-bottom: 8px;
+}
+
+.date {
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 16px;
+    color: #515255;
+}
+
+.title {
+    color: #303133;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.info-tags {
+    display: flex;
+}
+
+.tags {
+    margin: 0 5px;
+    width: 32px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #00000014;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img-project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-project {
+    width: 838px;
+    height: 585px;
+}
+
+.describe-text {
+    padding: 45px 92px 0px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #303133;
+}
+
+.download-text {
+    color: #0B0C0D;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 92px;
+    margin-bottom: 0;
+}
+
+.link-text {
+    color: #608AE1;
+    font-size: 14px;
+    padding: 0 92px;
+    margin-bottom: 70px;
+}
+
+body::-webkit-scrollbar, .view-modal-container::-webkit-scrollbar {
+    width: 12px;              
+}
+  
+  body::-webkit-scrollbar-track, .view-modal-container::-webkit-scrollbar-track {
+    background: #fff;       
+}
+  
+  body::-webkit-scrollbar-thumb, .view-modal-container::-webkit-scrollbar-thumb {
+    background-color: rgb(204, 202, 202);  
+    border-radius: 20px;   
+}
