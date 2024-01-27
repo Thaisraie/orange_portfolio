@@ -7,6 +7,19 @@ const Modal = ({closeModal}) => {
 
 const [fileImg, setFileImg] = useState(null)
 const [openViewModal, setOpenViewModal] = useState(false)
+const [value, setValue] = useState({
+    title: "",
+    link: "",
+    describe: "",
+    tags: "",
+})
+
+const handleChange = (e) => {
+    setValue({
+        ...value,
+        [e.target.name]:e.target.value
+    })
+}
 
 const handleFileImg = (e) => {
     if(e.target.files) {
@@ -15,7 +28,9 @@ const handleFileImg = (e) => {
 }
 
 const openViewModalFunction = () => {
+    if(value.title && value.tags && value.link && value.describe) {
     setOpenViewModal(true)
+    }
 }
 
 const closeViewModalFunction = () => {
@@ -30,7 +45,7 @@ const closeViewModalFunction = () => {
                 <div className='column-container'>
                 <div className='first-column'>
                 <p className='subtitle-modal'>Selecione o conteúdo que você deseja fazer upload</p>
-                <label for='arquivo'>
+                <label for='url'>
                 {fileImg ? <img className='img-file' alt='Imagem do Projeto' src={fileImg}/> : 
                 <div className='box-img-container'>                
                 <img src={IconImg} alt='ícone de arquivo'/>
@@ -40,13 +55,13 @@ const closeViewModalFunction = () => {
                 </div> 
                 }
                 </label>
-                <input type='file' name='arquivo' id='arquivo' accept='image/*' onChange={handleFileImg} />
+                <input type='file' name='url' id='url' accept='image/*' onChange={handleFileImg}/>
                 </div>
                 <div className='second-column' >
-                <input className='input-modal' type='text' placeholder='Título'/>
-                <input className='input-modal' type='text' placeholder='Tags'/>
-                <input className='input-modal' type='text' placeholder='Link'/>
-                <textarea className='textarea' placeholder='Descrição'/>
+                <input className='input-modal' type='text' name='title' value={value.title} onChange={handleChange} placeholder='Título'/>
+                <input className='input-modal' type='text' name='tags' value={value.tags} onChange={handleChange} placeholder='Tags'/>
+                <input className='input-modal' type='text' name='link' value={value.link} onChange={handleChange} placeholder='Link'/>
+                <textarea className='textarea' name='describe' value={value.describe} onChange={handleChange} placeholder='Descrição'/>
                 </div>
                 </div>
                 <div className='button-container' >
@@ -55,7 +70,7 @@ const closeViewModalFunction = () => {
                 <button onClick={() => closeModal()} className='second-button'>Cancelar</button>
                 </div>
             </div>
-            {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction}/> : null}
+            {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction} values={value} img={fileImg}/> : null}
         </div>
     )
 }
