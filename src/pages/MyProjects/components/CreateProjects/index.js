@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import Modal from '../../../../components/Modal'
+import SuccessModal from '../../../../components/Modal/components/SuccessModal'
 import IconImg from '../../../../assets/img/icon-img.png'
 import './styles.css'
 
 const CreateProjects = () => {
 const [openModal, setOpenModal] = useState(false)
+const [openSuccessModal, setOpenSuccessModal] = useState(false)
 
 const openModalFunction = () => {
     setOpenModal(true)
@@ -12,6 +14,15 @@ const openModalFunction = () => {
 
 const closeModalFunction = () => {
     setOpenModal(false)
+}
+
+const openSuccessModalFunction = () => {
+    setOpenSuccessModal(true)
+    setOpenModal(false)
+}
+
+const closeSuccessModalFunction = () => {
+    setOpenSuccessModal(false)
 }
 
     return (
@@ -25,7 +36,8 @@ const closeModalFunction = () => {
                 <p className='second-text'>Compartilhe seu talento com milhares de pessoas</p>
                 </div>  
             </div>
-            {openModal === true ? <Modal closeModal={closeModalFunction}/> : null}
+            {openModal === true ? <Modal closeModal={closeModalFunction} openSuccessModal={openSuccessModalFunction}/> : null}
+            {openSuccessModal === true ? <SuccessModal closeModal={closeSuccessModalFunction} /> : null}
         </div>
     )
 }

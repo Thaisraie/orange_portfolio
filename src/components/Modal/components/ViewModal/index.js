@@ -3,8 +3,11 @@ import iconUser from '../../../../assets/img/icon-profile.png'
 import iconClose from '../../../../assets/img/icon-close.png'
 import './styles.css'
 
-const ViewModal = ({closeModal, values, img}) => {   
+const ViewModal = ({closeModal, values, img, date}) => {   
     const tags = values.tags.split(" ")
+    const formatDate = date.toLocaleDateString('pt-BR', {day:"numeric", month:"numeric"});
+    const link = "https://" + values.link
+
 
     return (
         <div className="background-view-modal">
@@ -18,7 +21,7 @@ const ViewModal = ({closeModal, values, img}) => {
                     <img  className='user-img' src={iconUser} alt='ícone do usuário'/>
                     <div className='info-column' >
                     <h2 className='user-name'>Thais Siqueira</h2>
-                    <h3 className='date' >25/01</h3>
+                    <h3 className='date'>{formatDate}</h3>
                     </div>
                     </div>  
                 </div>
@@ -36,7 +39,7 @@ const ViewModal = ({closeModal, values, img}) => {
             </div>
             <p className='describe-text'>{values.describe}</p>
             <h2 className='download-text'>Download</h2>
-            <Link className='link-text' to="https://gumroad.com/products/wxCS" target="_blank" rel="noopener noreferrer">{values.link}</Link>           
+            <Link className='link-text' to={link} target="_blank" rel="noopener noreferrer">{values.link}</Link>           
             </div>
         </div>
     )

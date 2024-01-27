@@ -3,7 +3,7 @@ import ViewModal from './components/ViewModal'
 import IconImg from '../../assets/img/icon-img.png'
 import './styles.css'
 
-const Modal = ({closeModal}) => {
+const Modal = ({closeModal, openSuccessModal}) => {
 
 const [fileImg, setFileImg] = useState(null)
 const [openViewModal, setOpenViewModal] = useState(false)
@@ -13,6 +13,7 @@ const [value, setValue] = useState({
     describe: "",
     tags: "",
 })
+const [date, setDate] = useState(null)
 
 const handleChange = (e) => {
     setValue({
@@ -30,13 +31,19 @@ const handleFileImg = (e) => {
 const openViewModalFunction = () => {
     if(value.title && value.tags && value.link && value.describe) {
     setOpenViewModal(true)
-    }
+    setDate(new Date())
+   }
 }
 
 const closeViewModalFunction = () => {
     setOpenViewModal(false)
-}
+   }
 
+const openSuccessModalFunction = () => {
+    if(value.title && value.tags && value.link && value.describe) {
+        openSuccessModal()
+    }
+}
 
     return (
         <div className="background" >
@@ -65,12 +72,12 @@ const closeViewModalFunction = () => {
                 </div>
                 </div>
                 <div className='button-container' >
-                <p className='view-text' onClick={() => {openViewModalFunction()}} >Visualizar publicação</p>
-                <button className='primary-button'>Salvar</button>
+                <p className='view-text' onClick={() => openViewModalFunction()}>Visualizar publicação</p>
+                <button className='primary-button' onClick={() => openSuccessModalFunction()}>Salvar</button>
                 <button onClick={() => closeModal()} className='second-button'>Cancelar</button>
                 </div>
             </div>
-            {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction} values={value} img={fileImg}/> : null}
+            {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction} values={value} img={fileImg} date={date}/> : null}
         </div>
     )
 }
