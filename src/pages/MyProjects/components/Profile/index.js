@@ -26,7 +26,6 @@ const closeSuccessModalFunction = () => {
     setOpenSuccessModal(false)
 }
 
-
     return (
         <div className='profile'>
             <img className='icon-profile' src={iconProfileLarge} alt="ícone do perfil"/>

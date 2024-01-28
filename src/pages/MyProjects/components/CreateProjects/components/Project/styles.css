@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: Roboto;
+}
+
+.project-container {
+    width: 389px;
+}
+
+.project-img {
+    width: 389px;
+    height: 258px;
+    border-radius: 4px;
+    background: url(/src/assets/img/project.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-icon-container {
+    padding-top: 14px;
+}
+
+.project-icon { 
+    background-color: #FFCC99;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 346px;
+
+}
+
+.project-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -4px;
+}
+
+.project-user-infos {
+    display: flex;
+    align-items: center;
+}
+
+.project-profile-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.project-name {
+    font-size: 16px;
+    font-weight: 400;
+    color: #515255;
+    margin: 0 10px;
+}
+
+.project-tags {
+    background-color: #00000014;
+    padding: 8px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
