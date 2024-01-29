@@ -1,4 +1,4 @@
-import { useHref } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from './styles.module.css'
 import ScreenRegister from '../../pages/ScreenRegister'
 
@@ -12,7 +12,7 @@ export default function FormLogin(){
                 <label className={styles.label_password}>Password</label>
                 <input className={styles.input_password} type='password'></input>
                 <button className={styles.btn_entrar}>ENTRAR</button>
-                <a className={styles.registrar} href={ScreenRegister}>Cadastre-se</a>
+                <Link className={styles.registrar} to={'/register'}>Cadastre-se</Link>
            </form>
 
 

@@ -41,3 +41,21 @@
     
     }
 
+    @media (min-width: 639px) {
+    
+        .conteiner_pai{
+            display: flex;
+            justify-content: flex-end;
+            background-image:url('./../../assets/img/img_login.png');
+            background-size: 41vw 100vh;
+            background-repeat: no-repeat;
+            
+        }
+
+        .conteiner{
+            max-width: 58vw;
+
+            
+        }
+        
+    }
