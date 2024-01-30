@@ -11,6 +11,7 @@
 .my-projects-title {
     font-size: 20px;
     color: #0b0c0da1;
+    margin: 10px 22px;
 }
 
 .input {
@@ -19,7 +20,16 @@
     outline: none;
     border: 1px solid #96969693;
     width: 513px;
+    margin: 0 22px;
     margin-bottom: 35px;
+}
+
+.my-projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: stretch;
 }
 
 .box-img-container {
@@ -27,12 +37,13 @@
     background-color: #E6E9F2;
     width: 389px;
     padding-top: 70px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 22px;
 }
 
 .text-container {

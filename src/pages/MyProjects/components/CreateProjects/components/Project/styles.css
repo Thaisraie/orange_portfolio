@@ -6,16 +6,18 @@
 
 .project-container {
     width: 389px;
+    margin: 0 22px;
+    margin-bottom: 26px;
 }
 
 .project-img {
     width: 389px;
     height: 258px;
     border-radius: 4px;
-    background: url(/src/assets/img/project.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    cursor: pointer;
 }
 
 .project-icon-container {
@@ -31,15 +33,14 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-left: 346px;
-
+    margin-left: 346px; 
 }
 
 .project-infos {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -4px;
+    margin-top:10px;
 }
 
 .project-user-infos {
@@ -60,11 +61,19 @@
     margin: 0 10px;
 }
 
-.project-tags {
-    background-color: #00000014;
-    padding: 8px;
-    border-radius: 25px;
+.project-info-tags {
     display: flex;
-    align-items: center;
+}
+
+.tags {
+    margin: 0 2px;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: #00000014;
+    font-size: 13px;
+    font-weight: 500;
     text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }

@@ -57,15 +57,16 @@
     object-fit: cover;
 }
 
-.box-img-container {
+.modal-box-img-container {
     cursor: pointer;
     background-color: #E6E9F2;
     width: 389px;
-    height: 200px;
+    height: 284px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 15px;
     justify-content: center;
 }
 

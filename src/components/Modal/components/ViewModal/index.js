@@ -3,10 +3,10 @@ import iconUser from '../../../../assets/img/icon-profile.png'
 import iconClose from '../../../../assets/img/icon-close.png'
 import './styles.css'
 
-const ViewModal = ({closeModal, values, img, date}) => {   
-    const tags = values.tags.split(" ")
-    const formatDate = date.toLocaleDateString('pt-BR', {day:"numeric", month:"numeric"});
-    const link = "https://" + values.link
+const ViewModal = ({closeModal, title, link, describe, tags, img, date}) => {   
+    const formatTag = tags.split(" ")
+    const formatDate =  new Date(date).toLocaleDateString('pt-BR', {day:"numeric", month:"numeric"});
+    const links = "https://" + link
 
 
     return (
@@ -26,10 +26,10 @@ const ViewModal = ({closeModal, values, img, date}) => {
                     </div>  
                 </div>
                 <div className='info-title'>
-                    <h1 className='title'>{values.title}</h1>
+                    <h1 className='title'>{title}</h1>
                 </div>
                 <div className='info-tags'>
-                    {tags.map((tag) => 
+                    {formatTag.map((tag) => 
                     <p className='tags'>{tag}</p>
                     )}
                 </div>
@@ -37,9 +37,9 @@ const ViewModal = ({closeModal, values, img, date}) => {
             <div className='img-project-container'>
             <img className='img-project' src={img} alt='imagem do projeto'/>
             </div>
-            <p className='describe-text'>{values.describe}</p>
+            <p className='describe-text'>{describe}</p>
             <h2 className='download-text'>Download</h2>
-            <Link className='link-text' to={link} target="_blank" rel="noopener noreferrer">{values.link}</Link>           
+            <Link className='link-text' to={links} target="_blank" rel="noopener noreferrer">{links}</Link>           
             </div>
         </div>
     )

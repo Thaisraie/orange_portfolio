@@ -2,10 +2,11 @@ import {useState } from 'react'
 import ViewModal from './components/ViewModal'
 import IconImg from '../../assets/img/icon-img.png'
 import './styles.css'
+import axios from 'axios'
 
 const Modal = ({closeModal, openSuccessModal}) => {
 
-const [fileImg, setFileImg] = useState(null)
+const [fileImg, setFileImg] = useState("")
 const [openViewModal, setOpenViewModal] = useState(false)
 const [value, setValue] = useState({
     title: "",
@@ -13,6 +14,7 @@ const [value, setValue] = useState({
     describe: "",
     tags: "",
 })
+const [urlFileImg, setUrlFileImg] = useState("")
 const [date, setDate] = useState(null)
 
 const handleChange = (e) => {
@@ -25,6 +27,7 @@ const handleChange = (e) => {
 const handleFileImg = (e) => {
     if(e.target.files) {
         setFileImg(URL.createObjectURL(e.target.files[0]));
+        setUrlFileImg(e.target.files[0])
     }
 }
 
@@ -38,13 +41,20 @@ const openViewModalFunction = () => {
 const closeViewModalFunction = () => {
     setOpenViewModal(false)
    }
-
-const openSuccessModalFunction = () => {
+  
+const savePost = async () => {
     if(value.title && value.tags && value.link && value.describe) {
-        openSuccessModal()
-    }
-}
+    const formData = new FormData;
+    formData.append('titulo', value.title);
+    formData.append('link', value.link);
+    formData.append('descricao', value.describe);
+    formData.append('imagem', urlFileImg);
+    formData.append('usuarioID', '1'); 
+    formData.append('tags', value.tags);
 
+    await axios.post("http://3.239.251.235:8000/api/v1/portfolios/", formData).then(() => openSuccessModal())
+}
+}
     return (
         <div className="background" >
             <div className='modal-container'>
@@ -54,7 +64,7 @@ const openSuccessModalFunction = () => {
                 <p className='subtitle-modal'>Selecione o conteúdo que você deseja fazer upload</p>
                 <label for='url'>
                 {fileImg ? <img className='img-file' alt='Imagem do Projeto' src={fileImg}/> : 
-                <div className='box-img-container'>                
+                <div className='modal-box-img-container'>                
                 <img src={IconImg} alt='ícone de arquivo'/>
                 <div className='text-container'>
                 <p className='box-text'>Compartilhe seu talento com milhares de pessoas</p>
@@ -73,11 +83,11 @@ const openSuccessModalFunction = () => {
                 </div>
                 <div className='button-container' >
                 <p className='view-text' onClick={() => openViewModalFunction()}>Visualizar publicação</p>
-                <button className='primary-button' onClick={() => openSuccessModalFunction()}>Salvar</button>
+                <button className='primary-button' onClick={() => savePost()}>Salvar</button>
                 <button onClick={() => closeModal()} className='second-button'>Cancelar</button>
                 </div>
             </div>
-            {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction} values={value} img={fileImg} date={date}/> : null}
+            {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction} title={value.title} link={value.link} describe={value.describe} tags={value.tags} img={fileImg} date={date}/> : null}
         </div>
     )
 }
