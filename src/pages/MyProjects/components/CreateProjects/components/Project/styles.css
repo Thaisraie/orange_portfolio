@@ -10,18 +10,22 @@
     margin-bottom: 26px;
 }
 
-.project-img {
+.project-img-container{
     width: 389px;
     height: 258px;
     border-radius: 4px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     cursor: pointer;
 }
 
+.project-img{
+    width: 389px;
+    height: 258px;
+    object-fit: cover;
+}
+
 .project-icon-container {
-    padding-top: 14px;
+    position: absolute;
+    margin-top: 14px;
 }
 
 .project-icon { 
@@ -33,7 +37,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-left: 346px; 
+    margin-left: 346px;
 }
 
 .project-infos {

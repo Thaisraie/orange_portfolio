@@ -1,13 +1,11 @@
-import { useNavigate } from 'react-router-dom'
 import iconCheck from '../../../../assets/img/icon-check.png'
 import './styles.css'
 
 const SuccessModal = ({closeModal}) => {
-    const navigate = useNavigate()
 
     const redirectToMyProjects = () => {
         closeModal()
-        navigate("/myprojects") 
+        window.location.reload()
     }
 
     return (

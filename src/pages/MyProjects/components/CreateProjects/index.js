@@ -10,9 +10,10 @@ import axios from 'axios'
 const CreateProjects = () => {
 const [openModal, setOpenModal] = useState(false)
 const [openSuccessModal, setOpenSuccessModal] = useState(false)
-const [projects, setProjects] = useState([])
-const [openViewModal, setOpenViewModal] = useState(true)
-const [projectId, setProjectId] = useState("")
+const [projects, setProjects] = useState({})
+const [openViewModal, setOpenViewModal] = useState(false)
+const [projectId, setProjectId] = useState({})
+const [search, setSearch] = useState("")
 
 
 const openModalFunction = () => {
@@ -45,16 +46,28 @@ const findId = (id) => {
 }
 
 useEffect(() => {
-    axios.get("http://3.239.251.235:8000/api/v1/portfolios/usuario/1").then((response) => setProjects(response.data)
-)
+    axios.get("http://3.239.251.235:8000/api/v1/portfolios/usuario/1").then((response) => {
+        setProjects(response.data)
+})
 },[])
+
+const sortProjects = projects.length && projects.sort((a, b) => {
+    if(a.criado_em > b.criado_em) {
+        return -1
+    }
+})
+
+const searchTags = (search) => {
+    return projects.length && sortProjects.filter(project => project.tags.toLowerCase().includes(search.toLowerCase())) 
+}
+const searchProjects = searchTags(search)
 
     return (
         <div className='my-projects'>
             <h1 className='my-projects-title'>Meus projetos</h1>
-            <input className='input' type='text' placeholder='Buscar tags'/>
+            <input className='input' type='text' placeholder='Buscar tags' value={search} onChange={(e) => setSearch(e.target.value)} />
             <div className='my-projects-container'>
-            {projects.length ? projects.map((project) => (<Project date={project.criado_em} img={project.imagem} tag={project.tags} id={project.id} findId={findId} openViewModal={openViewModalFunction} closeViewModal={closeViewModalFunction}/>)): 
+            {projects.length ? searchProjects.map((project) => (<Project date={project.criado_em} img={project.imagem} tag={project.tags} id={project.id} findId={findId} openViewModal={openViewModalFunction} />)): 
             <div className='box-img-container' onClick={() => openModalFunction()}>
                 <img src={IconImg} alt='ícone de arquivo'/>
                 <div className='text-container'>
