@@ -4,12 +4,12 @@ export default function FormRegister(){
     return(
        
             <form className={styles.form_login}>
-                
+                <div className={styles.conteiner_nome}>
                     <label className={styles.label_nome}>Nome</label>
                     <input className={styles.input_nome} type='text' placeholder='Primeiro Nome'></input>
                     <label className={styles.label_sobrenome}>Sobrenome</label>
                     <input className={styles.input_sobrenome} type='text' placeholder='Sobrenome'></input>
-                
+                </div>
 
                 <label className={styles.label_email}>Email adress</label>
                 <input className={styles.input_email} type='email'></input>
