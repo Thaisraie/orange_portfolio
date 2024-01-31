@@ -161,11 +161,13 @@ color: #FCFDFF
         flex-direction: column;
         gap: 16px;
         flex-shrink: 0;
+        position: relative;
         
     }
 
     .label_email{
-        top: 256px;
+        position: absolute;
+        top: 120px;
     }
 
     .label_password{
@@ -194,11 +196,11 @@ color: #FCFDFF
     }
 
     .label_email{
-        top:223px;    
+        top: 60px;    
     }
 
     .label_password{
-        top: 292px;
+        top: 129px;
     }
   
 
