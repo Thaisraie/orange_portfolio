@@ -98,3 +98,18 @@ color: #FCFDFF
 .registrar{    
     color: #818388;
 }
+
+@media (min-width:639px){
+    .form_login{
+        width: 517px;
+        height: 268px;
+    }
+
+    .label_email{
+        margin-top: 41px;
+    }
+
+    .label_password{
+        margin-top: 108px;
+    }
+}

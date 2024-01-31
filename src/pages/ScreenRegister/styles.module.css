@@ -1,9 +1,15 @@
+.conteiner_pai{
+    width: 100vw;
+    height: 100vh;
+}
+
 .conteiner{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    
 
 }
 
@@ -19,44 +25,32 @@
     margin-top: 109px;
 
 }
-
-.button_google{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 36px;
-    height: 40px;
-    gap: 24px;
-    background-color: #FFFFFF;
-    padding: 11px;
-    border: 1px; 
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px 0 #00000020;
-    color: #0000008A;
-    font-weight: bold;
-    font-size: 14px;
-    
-    
-    
-    }
-
     @media (min-width: 639px) {
     
         .conteiner_pai{
             display: flex;
             justify-content: flex-end;
-            background-image:url('./../../assets/img/img_login.png');
-            background-size: 41vw 100%;
+            background-image:url('./../../assets/img/img_cadastro.png');
+            background-size: 41% 100%;
             background-repeat: no-repeat;
-            
+            background-position:left;
+        }
+
+        .title{
+            position: absolute;
+            margin-top: 254px;
+            margin-bottom: 524px;
+            font-family: Roboto;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 0em;
+            text-align: center;
         }
 
         .conteiner{
-            max-width: 58vw;
-
-            
+            max-width: 58vw;            
         }
-        
+
         
     }
