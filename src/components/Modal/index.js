@@ -32,7 +32,7 @@ const handleFileImg = (e) => {
 }
 
 const openViewModalFunction = () => {
-    if(value.title && value.tags && value.link && value.describe) {
+    if(fileImg && value.title && value.tags && value.link && value.describe) {
     setOpenViewModal(true)
     setDate(new Date())
    }
@@ -43,7 +43,7 @@ const closeViewModalFunction = () => {
    }
   
 const savePost = async () => {
-    if(value.title && value.tags && value.link && value.describe) {
+    if(fileImg && value.title && value.tags && value.link && value.describe) {
     const formData = new FormData();
     formData.append('titulo', value.title);
     formData.append('link', value.link);
@@ -85,8 +85,10 @@ const savePost = async () => {
                 </div>
                 <div className='button-container' >
                 <p className='view-text' onClick={() => openViewModalFunction()}>Visualizar publicação</p>
+                <div>
                 <button className='primary-button' onClick={() => savePost()}>Salvar</button>
                 <button onClick={() => closeModal()} className='second-button'>Cancelar</button>
+                </div>
                 </div>
             </div>
             {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction} title={value.title} link={value.link} describe={value.describe} tags={value.tags} img={fileImg} date={date} userInfo={userInfo}/> : null}

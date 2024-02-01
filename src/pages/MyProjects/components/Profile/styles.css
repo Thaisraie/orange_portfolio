@@ -9,6 +9,21 @@
     align-items: center;
     justify-content: center;
     margin-top: 80px;
+
+    @media (max-width: 768px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    @media (max-width: 550px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
 }
 
 .icon-profile {
@@ -17,11 +32,20 @@
     border-radius: 50%;
     padding: 0 40px;
     margin-top: 15px;
+
+    @media (max-width: 550px){
+        padding: 0; 
+    }
 }
 
 .profile-title {
     font-size: 24px;
     font-weight: 400;
+
+    @media (max-width: 425px){
+        text-align: start;
+
+    }
 }
 
 .profile-subtitle {
@@ -29,6 +53,11 @@
     font-weight: 400;
     color: #00000085;
     line-height: 08px;
+
+    @media (max-width: 425px){
+        text-align: start; 
+        margin-top: -6px;
+    }
 }
 
 .button {
@@ -44,4 +73,8 @@
     cursor: pointer;
     text-transform: uppercase;
     margin-top: 14px;
+    
+    @media (max-width: 425px){
+        margin-top: 0px;
+    }
 }

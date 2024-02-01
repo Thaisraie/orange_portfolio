@@ -36,9 +36,27 @@ const ViewModal = ({closeModal, title, link, describe, tags, img, date, userInfo
             <div className='img-project-container'>
             <img className='img-project' src={img} alt='imagem do projeto'/>
             </div>
+            <div className='container-mobile'>
+            <div className='user-info-mobile'>
+                    <div className='user-info-row-mobile'>
+                    <img  className='user-img-mobile' src={iconUser} alt='ícone do usuário'/>
+                    <div className='info-column-mobile'>
+                    <h2 className='user-name-mobile'>{userInfo.nome} {userInfo.sobrenome}</h2>
+                    <h3 className='date-mobile'>{formatDate}</h3>
+                    </div>
+                    </div>
+                    <div className='info-tags-mobile'>
+                    {formatTag.map((tag) => 
+                    <p className='tags-mobile'>{tag}</p>
+                    )}
+                </div>
+                    </div> 
+            <div className='footer-texts'>
             <p className='describe-text'>{describe}</p>
             <h2 className='download-text'>Download</h2>
-            <Link className='link-text' to={links} target="_blank" rel="noopener noreferrer">{links}</Link>           
+            <Link className='link-text' to={links} target="_blank" rel="noopener noreferrer">{links}</Link>
+            </div>           
+            </div>
             </div>
         </div>
     )

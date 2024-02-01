@@ -3,7 +3,7 @@ import ConfirmDeleteModal from "./components/ConfirmDeleteModal/index.";
 import EditProjectModal from "./components/EditProjectModal/index";
 import "./styles.css"
 
-const OptionsModal = ({id, findId, closeModal, openDeleteModal, closeDeleteModal, img, openEditSuccessModal, userInfo}) => {
+const OptionsModal = ({id, findId, closeModal, openDeleteModal, closeDeleteModal, img, title, describe, link, tag, openEditSuccessModal, userInfo}) => {
 const [openConfirmDeleteModal, setOpenConfirmDeleteModal] = useState(false)
 const [openEditProjectModal, setOpenEditProjectModal] = useState(false)
 
@@ -36,7 +36,7 @@ const closeEditProjectModalFunction = () => {
             </div>
             </div>
             {openConfirmDeleteModal === true ? <ConfirmDeleteModal closeModal={closeConfirmDeleteModalFunction} findId={findId} id={id} openDeleteModal={openDeleteModal} closeDeleteModal={closeDeleteModal} /> : null}
-            {openEditProjectModal === true ? <EditProjectModal closeModal={closeEditProjectModalFunction} img={img} findId={findId} id={id} openEditSuccessModal={openEditSuccessModal} userInfo={userInfo}/> : null}
+            {openEditProjectModal === true ? <EditProjectModal closeModal={closeEditProjectModalFunction} img={img} title={title} describe={describe} tag={tag} link={link} findId={findId} id={id} openEditSuccessModal={openEditSuccessModal} userInfo={userInfo}/> : null}
         </>
     )
 }

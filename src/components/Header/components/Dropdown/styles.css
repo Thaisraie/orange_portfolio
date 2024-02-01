@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: Roboto;
+}
+
+.dropdown {
+    width: 220px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.37);
+    top: 73px;
+    right: 0px;
+    height: 136px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.info-user-dropdown {
+    padding: 8px 12px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.title-dropdown {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000DE;
+}
+
+.text-dropdown {
+    color: #00000099;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: -8px;
+}
+
+.exit-content-dropdown {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 9px 12px;
+    cursor: pointer;
+
+}
+
+.exit-content-dropdown:hover {
+    background-color: #FFEECC;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.exit-icon-dropdown {
+    margin-right: 12px;
+}

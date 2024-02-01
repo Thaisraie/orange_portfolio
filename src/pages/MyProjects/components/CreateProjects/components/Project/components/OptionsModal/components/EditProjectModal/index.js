@@ -3,14 +3,14 @@ import ViewModal from '../../../../../../../../../../components/Modal/components
 import './styles.css'
 import axios from 'axios'
 
-const EditProjectModal = ({closeModal, img, findId, id, openEditSuccessModal, userInfo}) => {
+const EditProjectModal = ({closeModal, img, title, describe, link, tag, findId, id, openEditSuccessModal, userInfo}) => {
 
 const [openViewModal, setOpenViewModal] = useState(false)
 const [value, setValue] = useState({
-    title: "",
-    link: "",
-    describe: "",
-    tags: "",
+    title: title,
+    link: link,
+    describe: describe,
+    tags: tag,
 })
 const [date, setDate] = useState(null)
 
@@ -22,7 +22,7 @@ const handleChange = (e) => {
 }
 
 const openViewModalFunction = () => {
-    if(value.title && value.tags && value.link && value.describe) {
+    if(value.title || value.tags || value.link || value.describe) {
     setOpenViewModal(true)
     setDate(new Date())
    }
@@ -65,8 +65,10 @@ const savePost = async () => {
                 </div>
                 <div className='button-container' >
                 <p className='view-text' onClick={() => openViewModalFunction()}>Visualizar publicação</p>
+                <div>
                 <button className='primary-button' onClick={() => savePost()}>Salvar</button>
                 <button onClick={() => closeModal()} className='second-button'>Cancelar</button>
+                </div>
                 </div>
             </div>
             {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction} title={value.title} link={value.link} describe={value.describe} tags={value.tags} img={img} date={date} userInfo={userInfo}/> : null}

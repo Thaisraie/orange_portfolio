@@ -27,10 +27,10 @@ export default function MyProject() {
   }, [token])
 
     return (
-        <>
-        <Header/>
+      <>
+        <Header userInfo={userInfo}/>
         <Profile userInfo={userInfo}/>
         <CreateProjects userInfo={userInfo}/>
-      </>   
+        </>
     )
 }

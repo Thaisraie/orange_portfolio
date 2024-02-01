@@ -6,7 +6,7 @@ import DeleteModal from './components/OptionsModal/components/ConfirmDeleteModal
 import "./styles.css"
 import EditSuccessModal from './components/OptionsModal/components/EditProjectModal/components/EditSuccessModal'
 
-const Project = ({date, img, tag, id, findId, openViewModal, userInfo}) => {
+const Project = ({date, title, describe, img, link, tag, id, findId, openViewModal, userInfo}) => {
 const [openOptionsModal, setOpenOptionsModal] = useState(false)
 const [openDeleteModal, setOpenDeleteModal] = useState(false)
 const [openEditSuccessModal, setOpenEditSuccessModal] = useState(false)
@@ -49,7 +49,7 @@ const closeEditSuccessModalFunction = () => {
                 <div className='project-icon' onClick={() => openOptionsModalFunction()}>
                 <img src={iconEdit} alt='ícone de editar'/>
                 </div>
-                {openOptionsModal === true ? <OptionsModal id={id} findId={findId} closeModal={closeOptionsModalFunction} openDeleteModal={openDeleteModalFunction} closeDeleteModal={closeDeleteModalFunction} img={img} openEditSuccessModal={openEditSuccessModalFunction} userInfo={userInfo}/> : null}
+                {openOptionsModal === true ? <OptionsModal id={id} findId={findId} closeModal={closeOptionsModalFunction} openDeleteModal={openDeleteModalFunction} closeDeleteModal={closeDeleteModalFunction} img={img} title={title} describe={describe} link={link} tag={tag}  openEditSuccessModal={openEditSuccessModalFunction} userInfo={userInfo}/> : null}
             </div>
             <div className='project-img-container' onClick={() => openViewModalFunction(id)}>
                 <img className='project-img' src={img} alt='imagem do projeto' />
@@ -62,7 +62,12 @@ const closeEditSuccessModalFunction = () => {
             <div className='project-info-tags'>
                 {tags.length <= 2 ? tags.map((tag) => 
                     <p className='tags'>{tag}</p>
-                    ) :  <p className='tags'>...</p>}
+                    ) : <>
+                    <p className='tags'>{tags[0]}</p>
+                    <p className='tags'>{tags[1]}</p>   
+                    <p className='tags'>...</p>  
+                    </>                    
+                }
                 </div>
             </div>
             {openDeleteModal === true ? <DeleteModal closeModal={closeDeleteModalFunction} /> : null}

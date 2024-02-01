@@ -12,6 +12,15 @@
     font-size: 20px;
     color: #0b0c0da1;
     margin: 10px 22px;
+
+    @media (max-width: 768px) {
+        margin: 10px 0px;
+    }
+
+    @media (max-width: 550px){
+        margin: 10px 0px;
+        
+    }
 }
 
 .input {
@@ -22,6 +31,24 @@
     width: 513px;
     margin: 0 22px;
     margin-bottom: 35px;
+
+    @media (max-width: 768px) {
+        width: 70%;
+        margin: 0;
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 560px) {
+        width: 94%;
+        margin: 0;
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 430px){
+        width: 92%;
+        margin: 0;
+        margin-bottom: 24px;
+    }
 }
 
 .my-projects-container{
@@ -30,6 +57,14 @@
     box-sizing: border-box;
     align-items: center;
     justify-content: stretch;
+
+    @media (max-width: 550px){
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .box-img-container {
@@ -44,6 +79,15 @@
     align-items: center;
     justify-content: center;
     margin: 0 22px;
+    
+    @media (max-width: 768px){
+        margin: 0px;
+    }
+
+    @media (max-width: 550px){
+        width: 100%;
+        margin: 0;
+    }
 }
 
 .text-container {
