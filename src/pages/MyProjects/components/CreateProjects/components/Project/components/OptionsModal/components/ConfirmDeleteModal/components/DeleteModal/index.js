@@ -1,4 +1,4 @@
-import iconCheck from '../../../../assets/img/icon-check.png'
+import iconCheck from '../../../../../../../../../../../../assets/img/icon-check.png'
 import './styles.css'
 
 const DeleteModal = ({closeModal}) => {

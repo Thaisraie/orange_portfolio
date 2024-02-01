@@ -3,11 +3,10 @@ import iconUser from '../../../../assets/img/icon-profile.png'
 import iconClose from '../../../../assets/img/icon-close.png'
 import './styles.css'
 
-const ViewModal = ({closeModal, title, link, describe, tags, img, date}) => {   
+const ViewModal = ({closeModal, title, link, describe, tags, img, date, userInfo}) => {   
     const formatTag = tags.split(" ")
     const formatDate =  new Date(date).toLocaleDateString('pt-BR', {day:"numeric", month:"numeric"});
     const links = "https://" + link
-
 
     return (
         <div className="background-view-modal">
@@ -20,7 +19,7 @@ const ViewModal = ({closeModal, title, link, describe, tags, img, date}) => {
                 <div className='user-info'>
                     <img  className='user-img' src={iconUser} alt='ícone do usuário'/>
                     <div className='info-column' >
-                    <h2 className='user-name'>Thais Siqueira</h2>
+                    <h2 className='user-name'>{userInfo.nome} {userInfo.sobrenome}</h2>
                     <h3 className='date'>{formatDate}</h3>
                     </div>
                     </div>  

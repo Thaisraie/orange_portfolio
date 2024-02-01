@@ -4,7 +4,7 @@ import SuccessModal from '../../../../components/Modal/components/SuccessModal'
 import iconProfileLarge from '../../../../assets/img/icon-profile-large.png'
 import './styles.css'
 
-const Profile = () => {
+const Profile = ({userInfo}) => {
 
 const [openModal, setOpenModal] = useState(false)
 const [openSuccessModal, setOpenSuccessModal] = useState(false)
@@ -30,11 +30,11 @@ const closeSuccessModalFunction = () => {
         <div className='profile'>
             <img className='icon-profile' src={iconProfileLarge} alt="ícone do perfil"/>
             <div>
-            <h1 className='profile-title'>Thais Siqueira</h1>
+            <h1 className='profile-title'>{userInfo.nome} {userInfo.sobrenome}</h1>
             <h2 className='profile-subtitle'>Brasil</h2>
             <button className='button' onClick={() => openModalFunction()} >Adicionar Projeto</button>
             </div>
-            {openModal === true ? <Modal closeModal={closeModalFunction} openSuccessModal={openSuccessModalFunction}/> : null}
+            {openModal === true ? <Modal closeModal={closeModalFunction} openSuccessModal={openSuccessModalFunction} userInfo={userInfo}/> : null}
             {openSuccessModal === true ? <SuccessModal closeModal={closeSuccessModalFunction} /> : null}
         </div>
     )
