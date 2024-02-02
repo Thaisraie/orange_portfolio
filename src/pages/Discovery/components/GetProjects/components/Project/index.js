@@ -1,18 +1,19 @@
 import iconProfile from '../../../../../../assets/img/icon-profile.png'
 import "./styles.css"
 
-const Project = ({date, img, tag, openViewModal, userInfo}) => {
+const Project = ({date, id, img, tag, openViewModal, userInfo, findId}) => {
 
 const tags = tag.split(" ")
 const formatDate = new Date(date).toLocaleDateString('pt-BR', {day:"numeric", month:"numeric"})
 
-const openViewModalFunction = () => {
+const openViewModalFunction = (id) => {
+    findId(id)
     openViewModal()
 }
 
     return (
         <div className='project-container'>
-            <div className='project-img-container' onClick={() => openViewModalFunction()}>
+            <div className='project-img-container' onClick={() => openViewModalFunction(id)}>
                 <img className='project-img' src={img} alt='imagem do projeto' />
             </div>
             <div className='project-infos'>         
