@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: Roboto;
+}
+
+.background-delete-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.delete-modal-container {
+    padding: 0px 5px 8px;
+    width: 351px;
+    height: 242px;
+    background-color: #FCFDFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+
+    @media (max-width: 430px) {
+        margin-top: 20px;
+        width: 80%;
+        display: flex;
+     }
+}
+
+.delete-modal-title {
+    text-align: center;
+    font-size: 24px;
+    color: #515255;
+    font-weight: 500;
+    padding: 0 50px;
+
+    @media (max-width: 430px) {
+        padding: 0 20px;
+      }
+}
+
+.delete-modal-img-container {
+    background-color: #118822;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-modal-btn {
+    background-color: #FF5522;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #FCFDFF;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 4px;
+    margin-top: 22px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.37);
+}

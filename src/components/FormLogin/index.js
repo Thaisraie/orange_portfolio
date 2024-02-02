@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import styles from './styles.module.css'
-import ScreenRegister from '../../pages/ScreenRegister'
 
 export default function FormLogin(){
     return(
@@ -12,7 +11,7 @@ export default function FormLogin(){
                 <label className={styles.label_password}>Password</label>
                 <input className={styles.input_password} type='password'></input>
                 <button className={styles.btn_entrar}>ENTRAR</button>
-                <Link className={styles.registrar} to={'/register'}>Cadastre-se</Link>
+                <Link className={styles.registrar} to={'/signup'}>Cadastre-se</Link>
            </form>
 
 

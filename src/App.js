@@ -3,19 +3,19 @@ import {
   Route,
   Routes
 } from 'react-router-dom';
-import ScreenLogin from "./pages/ScreenLogin";
-import ScreenRegister from "./pages/ScreenRegister";
-import ScreenSuccessRegister from "./pages/ScreenSuccessRegister";
-import ScreenPortfolio from "./pages/ScreenPortfolio";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import MyProjects from "./pages/MyProjects";
+import Discovery from "./pages/Discovery";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<ScreenLogin/>}/>
-        <Route path='/register' element={<ScreenRegister/>}/>
-        <Route path='/success-register' element={<ScreenSuccessRegister/>}/>
-        <Route path="/portfolio" element={<ScreenPortfolio/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/myprojects' element={<MyProjects/>}/>
+        <Route path="/discovery" element={<Discovery/>}/>
       </Routes>
     </BrowserRouter>
   );

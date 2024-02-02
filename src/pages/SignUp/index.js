@@ -1,7 +1,7 @@
 import styles from './styles.module.css'
 import FormRegister from '../../components/FormRegister'
 
-export default function ScreenRegister (){
+export default function SignUp (){
 
     return (
         <div className={styles.conteiner_pai}>
