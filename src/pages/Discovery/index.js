@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Header from "../../components/Header"
 import axios from "axios";
+import Text from "./components/Text";
+import GetProjects from "./components/GetProjects";
 
 
 export default function Discovery(){
@@ -28,6 +30,8 @@ export default function Discovery(){
     return(
         <>
         <Header userInfo={userInfo}/>
+        <Text/>
+        <GetProjects userInfo={userInfo}/>
         </>
     )
 }

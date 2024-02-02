@@ -45,10 +45,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 38%;
-    margin-bottom: 8px;
+    margin-top: 25%;
+    margin-bottom: -24px;
     width: 100%;
-
 
     @media (max-width: 768px) {
         margin-top: 5vh;
@@ -74,7 +73,7 @@
 
 .icon-close {
     position: relative;
-    left: 70vw;
+    left: 72vw;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -173,8 +172,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 264px;
-    margin-top: 50px;
+    margin-left: 300px;
+    margin-top: 10px;
     width: 100%;
 
     @media (max-width: 768px) {
@@ -194,7 +193,7 @@
     color: #0B0C0D;
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 0;
+    margin-top: 26px;
 }
 
 .link-text {

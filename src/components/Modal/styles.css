@@ -64,6 +64,7 @@
     color: #515255;
     font-size: 24px;
     font-weight: 400;
+    margin-bottom: 4px;
 
     @media (max-width: 768px) {
         margin-right: 40vw;
@@ -78,6 +79,7 @@
     color: #515255;
     font-size: 16px;
     font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .column-container {
@@ -92,11 +94,12 @@
 .first-column {
     display: flex;
     flex-direction: column;
+    margin-top: 16px;
 }
 
 .img-file {
     width: 389px;
-    height: 298px;
+    height: 305px;
     border-radius: 4px;
     cursor: pointer;
     object-fit: cover;
@@ -114,7 +117,7 @@
     cursor: pointer;
     background-color: #E6E9F2;
     width: 389px;
-    height: 284px;
+    height: 290px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -261,4 +264,6 @@ input[type="file"] {
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
+    margin-bottom: 18px;
+    margin-top: 10px;
 }

@@ -26,7 +26,7 @@ const DropdownMobile = ({userInfo}) => {
             </div>
             <div className='exit-content-dropdown-mobile'>
                 <img className='exit-icon-dropdown-mobile' src={iconExit} alt='icone de sair'/>
-                <h1 className='title-dropdown-mobile'>Sair</h1>
+                <h1 className='exit-text-dropdown-mobile'>Sair</h1>
             </div>
         </div>
     )

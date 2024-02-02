@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: Roboto;
+}
+
+.text-container-discovery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 0 320px;
+
+    @media (max-width: 1350px) {
+        padding: 0 220px;
+        margin-top: 50px;
+    }
+    @media (max-width: 1110px) {
+        padding: 0 120px;
+        margin-top: 50px;
+    }
+    @media (max-width: 860px) {
+        padding: 0 30px;
+        margin-top: 50px;
+    }
+    @media (max-width: 768px) {
+        padding: 0 6px;
+        margin-top: 50px;
+    }
+}
+
+.title-discovery {
+    font-size: 34px;
+    font-weight: 500;
+    color: #222244;
+    text-align: center;
+    @media (max-width: 768px) {
+       font-size: 24px;
+    }
+}

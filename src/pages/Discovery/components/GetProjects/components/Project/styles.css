@@ -8,7 +8,6 @@
     width: 389px;
     margin: 0 22px;
     margin-bottom: 26px;
-    border-radius: 4px;
 
     @media (max-width: 768px){
         margin: 0;
@@ -37,47 +36,9 @@
     width: 389px;
     height: 258px;
     object-fit: cover;
-    border-radius: 4px;
 
     @media (max-width: 550px){
         width: 100%;
-    }
-}
-
-.project-icon-container {
-    position: absolute;
-    margin-top: 14px;
-}
-
-.project-icon { 
-    background-color: #FFCC99;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-left: 346px;  
-
-    @media (max-width: 550px){
-        margin-left: 80vw; 
-    }
-
-    @media (max-width: 430px){
-        margin-left: 78vw; 
-    }
-
-    @media (max-width: 400px){
-        margin-left: 75vw; 
-    }
-
-    @media (max-width: 330px){
-        margin-left: 70vw; 
-    }
-
-    @media (max-width: 280px){
-        margin-left: 65vw; 
     }
 }
 

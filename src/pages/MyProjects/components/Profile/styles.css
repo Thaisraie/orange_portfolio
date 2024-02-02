@@ -41,6 +41,7 @@
 .profile-title {
     font-size: 24px;
     font-weight: 400;
+    margin-top: 16px;
 
     @media (max-width: 425px){
         text-align: start;
@@ -53,10 +54,11 @@
     font-weight: 400;
     color: #00000085;
     line-height: 08px;
+    margin-top: 12px;
+    margin-bottom: 10px;
 
     @media (max-width: 425px){
         text-align: start; 
-        margin-top: -6px;
     }
 }
 
@@ -75,6 +77,6 @@
     margin-top: 14px;
     
     @media (max-width: 425px){
-        margin-top: 0px;
+        margin-top: 4px;
     }
 }

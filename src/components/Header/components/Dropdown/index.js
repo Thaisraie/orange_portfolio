@@ -12,7 +12,7 @@ const Dropdown = ({userInfo}) => {
             </div>
             <div className='exit-content-dropdown'>
                 <img className='exit-icon-dropdown' src={iconExit} alt='icone de sair'/>
-                <h1 className='title-dropdown'>Sair</h1>
+                <h1 className='exit-title-dropdown'>Sair</h1>
             </div>
         </div>
     )
