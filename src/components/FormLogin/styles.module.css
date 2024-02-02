@@ -9,7 +9,7 @@
     height: 234px;
     flex-direction: column;
     gap: 16px;
-    flex-shrink: 0;
+    flex-shrink: 0; 
     
 }
 
@@ -77,7 +77,7 @@ padding: 12px;
 
 .btn_entrar{
     display: flex;
-    width: 312px;
+
     height: 42px;
     padding: 8px 22px;
     flex-direction: column;
@@ -101,15 +101,15 @@ color: #FCFDFF
 
 @media (min-width:639px){
     .form_login{
-        width: 517px;
-        height: 268px;
+        width: 40vw;
+        height: 20vh;
     }
 
     .label_email{
-        margin-top: 41px;
+        margin-top: 24px;
     }
 
     .label_password{
-        margin-top: 108px;
+        margin-top: 91px;
     }
 }
