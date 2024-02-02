@@ -65,10 +65,6 @@
     font-size: 24px;
     font-weight: 400;
 
-    @media (max-width: 916px) {
-        margin-top: 18vh;
-    }
-
     @media (max-width: 768px) {
         margin-right: 40vw;
     }
