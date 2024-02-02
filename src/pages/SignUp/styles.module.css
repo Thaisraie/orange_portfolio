@@ -1,0 +1,56 @@
+.conteiner_pai{
+    width: 100vw;
+    height: 100vh;
+}
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+
+}
+
+.title{
+    color: var(--Color-Brand-Primria-Primary-90, var(--Color-Brand-Primria-Primary-90, #224));
+    text-align: center;
+    /* [Orange P] Style Guide/H5 */
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 100% */
+    margin-top: 109px;
+
+}
+    @media (min-width: 639px) {
+    
+        .conteiner_pai{
+            display: flex;
+            justify-content: flex-end;
+            background-image:url('./../../assets/img/img_cadastro.png');
+            background-size: 41% 100%;
+            background-repeat: no-repeat;
+            background-position:left;
+        }
+
+        .title{
+            position: absolute;
+            margin-top: 254px;
+            margin-bottom: 524px;
+            font-family: Roboto;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+
+        .conteiner{
+            max-width: 58vw;            
+        }
+
+        
+    }
