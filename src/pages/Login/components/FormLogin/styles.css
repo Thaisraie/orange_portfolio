@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: Roboto;
+}
+
+.login_form_container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title_login {
+    color: #222244;
+    font-size: 48px;
+    font-weight: 400;
+
+    @media (max-width: 540px) {
+       text-align: center;
+       font-size: 24px;
+    }
+}
+
+.button_google{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    height: 40px;
+    gap: 24px;
+    background-color: #FFFFFF;
+    padding: 11px;
+    border: none;
+    outline: none; 
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0px 3px 0 #00000020;
+    color: #0000008A;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.text_login_container {
+    width: 517px;
+    margin-bottom: 20px;
+
+    @media (max-width: 540px) {
+        width: 90%;
+    }
+}
+
+.text_login{
+    color: #515255;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.15px;
+    margin-bottom: 6px;
+
+    @media (max-width: 540px) {
+        font-size: 16px;
+    }
+}
+
+.form_login{
+    width: 517px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-shrink: 0;
+
+    @media (max-width: 540px) {
+        width: 90%;
+    }
+}
+
+.label_email{
+    position: absolute;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    margin-top: -6px;
+    margin-left: 16px;
+    padding: 0 4px;
+    background-color: white;  
+    color: #515255; 
+}
+
+.input_login{
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #96969693;
+    padding: 16px 12px;
+    font-size: 16px;
+    width: 490px;
+
+    @media (max-width: 540px) {
+        width: 90%;
+    }
+}
+
+.label_password{
+    position: absolute;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    margin-top: 62px;
+    padding: 0 4px;
+    margin-left: 16px;
+    background-color: white;
+    color: #515255;
+}
+
+.btn_entrar{
+    width: 517px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border:none;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    background: #FF5522;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.20), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    color: #FCFDFF;
+
+    @media (max-width: 540px) {
+        width: 97%;
+    }
+}
+
+.registrar_btn_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+    width: 517px;
+    margin-top: 20px;
+
+    @media (max-width: 540px) {
+        width: 90%;
+     }
+}
+.registrar_btn{    
+    color: #818388;
+    text-decoration: none;
+    font-size: 16px;
+}

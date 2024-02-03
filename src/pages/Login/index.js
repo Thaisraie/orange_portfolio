@@ -1,18 +1,16 @@
-import styles from './styles.module.css'
-import logo_google from '../../assets/img/logo googleg 48dp.jpg'
-import FormLogin from '../../components/FormLogin'
+import './styles.css'
+import imgLogin from '../../assets/img/img_login.png'
+import FormLogin from './components/FormLogin'
 
 export default function Login(){
     return (
-        <div className={styles.conteiner_pai}>
-            <div className={styles.conteiner}>
-            <h1 className={styles.title}>Entre no Orange Portfolio</h1>
-            <button className={styles.button_google}>
-                <img src={logo_google}></img>
-               Entrar com Google
-            </button>
+            <div className="conteiner">
+                <div className='container-img-login'>
+                    <img className="img-login" src={imgLogin} alt='imagem login'/>
+                </div>
+                <div className='container-form-login'>
             <FormLogin/>
             </div>
-        </div>
+            </div>
     )
 }
