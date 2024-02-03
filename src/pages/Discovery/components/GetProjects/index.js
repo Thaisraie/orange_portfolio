@@ -28,10 +28,8 @@ useEffect(() => {
 })
 },[])
 
-const findAllUsersProjects = projects.find((b) => b.usuarioID !== userInfo.id)
-const allUsersProjects = new Array(findAllUsersProjects)
 
-const sortProjects = projects.length && allUsersProjects.sort((a, b) => {
+const sortProjects = projects.length && projects.sort((a, b) => {
     if(a.criado_em > b.criado_em) {
         return -1
     }

@@ -7,7 +7,7 @@ import axios from 'axios';
 export default function MyProject() {
   const [token, setToken] = useState('');
   const [userInfo, setUserInfo] = useState([]);
-
+  
   useEffect(() => {
     const formData = new FormData();
     formData.append('email', 'tha@gmail.com');
