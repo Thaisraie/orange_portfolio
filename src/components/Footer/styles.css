@@ -6,15 +6,18 @@
     position:fixed;
     bottom:0px;
     width: 100%;
-    background-color: #ff5622;
+    background-color: #111133;
     padding: 4px;
-    border-top: 1px solid #22224481;
 }
 
 .text-footer {
     color: #fff;
     font-size: 12px;
     font-weight: 400;
+   
+    @media (max-width:768px ) {
+        text-align: center;
+    }
 }
 
 .footer-links {
@@ -23,5 +26,5 @@
 }
 
 .footer-links:hover {
-    color: #222244;
+    color: #FF5522;
 }

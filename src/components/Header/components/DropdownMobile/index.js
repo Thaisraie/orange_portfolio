@@ -23,7 +23,6 @@ const DropdownMobile = ({userInfo}) => {
         })
         }
  
-
     return (
         <div className='dropdown-mobile'>
             <div className='info-user-dropdown-mobile'>
