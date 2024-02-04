@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 import iconExit from '../../../../assets/img/icon-exit.png'
 import './styles.css'
+import axios from 'axios'
 
 
-const DropdownMobile = ({userInfo, logout}) => {
+const DropdownMobile = ({userInfo}) => {
     const navigate = useNavigate()
 
     const redirectToMyProjects = () => {
@@ -13,6 +14,15 @@ const DropdownMobile = ({userInfo, logout}) => {
     const redirectToDiscovery = () => {
         navigate("/discovery")
     }
+
+    const logout = async () => {
+        await axios.post("http://3.239.251.235:8000/api/v1/usuarios/logout").then(() => {
+            localStorage.removeItem("usersToken")
+            localStorage.removeItem("usersTokenGoogle")
+            navigate("/")
+        })
+        }
+ 
 
     return (
         <div className='dropdown-mobile'>
@@ -24,9 +34,9 @@ const DropdownMobile = ({userInfo, logout}) => {
                 <h1 className='title-dropdown-mobile' onClick={() => redirectToMyProjects()}>Meus projetos</h1>
                 <h1 className='title-dropdown-mobile' onClick={() => redirectToDiscovery()}>Descobrir</h1>
             </div>
-            <div className='exit-content-dropdown-mobile'>
+            <div className='exit-content-dropdown-mobile' onClick={() => logout()}>
                 <img className='exit-icon-dropdown-mobile' src={iconExit} alt='icone de sair'/>
-                <h1 className='exit-text-dropdown-mobile' onClick={() => logout()}>Sair</h1>
+                <h1 className='exit-text-dropdown-mobile'>Sair</h1>
             </div>
         </div>
     )

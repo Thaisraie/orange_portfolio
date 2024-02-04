@@ -1,5 +1,5 @@
 import {useState } from 'react'
-import ViewModal from '../../../../../../../../../../components/Modal/components/ViewModal'
+import ViewModal from '../../../../../../../../../../components/ViewModal'
 import './styles.css'
 import axios from 'axios'
 

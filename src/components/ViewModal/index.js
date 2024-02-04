@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import iconClose from '../../../../assets/img/icon-close.png'
+import iconClose from '../../assets/img/icon-close.png'
 import './styles.css'
 
 const ViewModal = ({closeModal, title, link, describe, tags, img, date, userInfo}) => {   

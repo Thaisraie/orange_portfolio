@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import ViewModal from '../../../../components/Modal/components/ViewModal'
+import ViewModal from '../../../../components/ViewModal'
 import './styles.css'
 import Project from './components/Project'
 import axios from 'axios'
 
-const GetProjects = ({userInfo}) => {
+const GetProjects = ({ userInfo}) => {
 const [projects, setProjects] = useState([])
 const [openViewModal, setOpenViewModal] = useState(false)
 const [search, setSearch] = useState("")
@@ -25,7 +25,14 @@ const findId = (id, usuarioID) => {
     setUsersInfo(users.find((a) => a.id === usuarioID))
 }
 
-const sortProjects = projects.length && projects.sort((a, b) => {
+const allUsersProjects = []
+projects.length && projects.forEach((a) => {
+    if(a.usuarioID !== userInfo.id) {
+        allUsersProjects.push(a)
+    }
+})
+
+const sortProjects = projects.length && allUsersProjects.sort((a, b) => {
     if(a.criado_em > b.criado_em) {
         return -1
     }
@@ -55,7 +62,7 @@ useEffect(() => {
             <label className='input-label'>Buscar tags</label>
             <input className='input' type='text' value={search} onChange={(e) => setSearch(e.target.value)} />
             <div className='my-projects-container'>
-            {projects.length ? searchProjects.map((project) => (<Project key={`${project.id}-project-id`} date={project.criado_em} id={project.id} img={project.imagem} tag={project.tags} openViewModal={openViewModalFunction} userInfo={usersInfo} findId={findId} usuarioID={project.usuarioID}/>)): null}
+            {projects.length ? searchProjects.map((project) => (<Project key={`${project.id}-project-id`} date={project.criado_em} id={project.id} img={project.imagem} tag={project.tags} openViewModal={openViewModalFunction} findId={findId} usuarioID={project.usuarioID} users={users} />)): null}
             {openViewModal === true ? <ViewModal closeModal={closeViewModalFunction} title={projectId.titulo} link={projectId.link} describe={projectId.descricao} tags={projectId.tags} img={projectId.imagem} date={projectId.criado_em} userInfo={usersInfo}/> : null}
             </div>
         </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Modal from '../../../../components/Modal'
-import ViewModal from '../../../../components/Modal/components/ViewModal'
+import ViewModal from '../../../../components/ViewModal'
 import SuccessModal from '../../../../components/Modal/components/SuccessModal'
 import IconImg from '../../../../assets/img/icon-img.png'
 import './styles.css'

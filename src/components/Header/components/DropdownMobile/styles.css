@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-* {
-    font-family: Roboto;
-}
-
 .dropdown-mobile {
 width: 220px;
 background-color: rgb(255, 255, 255);
