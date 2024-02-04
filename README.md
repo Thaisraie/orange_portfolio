@@ -1,19 +1,30 @@
-# Orange Portfólio
-
-Projeto desenvolvido para o hackathon do programa de formação {AI V.5.0} do grupo Fcamara e OrangeJuice
-
 ## Índice
 
 - [Sobre](#sobre)
 - [Recursos](#recursos)
-- [Instalação](#instalação)
-- [Como Usar](#como-usar)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Tecnologias de organização do projeto](#tecnologias-de-organização-do-projeto)
+  - [Back-end](#back-end)
+  - [Front-end](#front-end)
+  - [Banco de dados, Cloud e Documentação](#banco-de-dados-cloud-e-documentação)
+- [Instalando Frameworks e bibliotecas](#instalando-frameworks-e-bibliotecas)
+  - [Back-end](#back-end-1)
+  - [Front-end](#front-end-1)
+- [Como Rodar os Testes](#como-rodar-os-testes)
+  - [Back-end](#back-end-2)
+  - [Front-end](#front-end-2)
+- [Principais Problemas Enfrentados](#principais-problemas-enfrentados)
+- [Próximos Passos](#próximos-passos)
+- [Contribuições](#contribuições)
+- [Agradecimentos](#agradecimentos)
+
+---
 
 ## Sobre
 
 O Orange Portfólio é uma aplicação web para hospedagem de projetos e portfólios. Visa atender a profissionais voltados para área de desenvolvimento e diversas áreas, permitindo a exibição de seus trabalhos e a descoberta de outros projetos.
+
+---
 
 ## Recursos
 
@@ -28,29 +39,39 @@ O site está disponível online. Você pode acessá-lo através do seguinte URL:
 
 [Orange Portfólio](https://)
 
+---
 
 # Tecnologias Utilizadas:
 
 ## Tecnologias de organização do projeto:
-- Protótipo: [https://www.figma.com/file/utDx59m5Opz1lDSN1J4r9I/Desafio---Programa-de-Forma%C3%A7%C3%A3o-5.0?type=design&node-id=529-9727&mode=design&t=Yo984RS7Qxftwlbn-0](Figma)
-- Organização da SQUAD 2: [https://trello.com/b/weaLLQcC/hackathon-orangejuice](hackathon-orangejuice)
-- 
+- Protótipo: [Figma](https://www.figma.com/file/utDx59m5Opz1lDSN1J4r9I/Desafio---Programa-de-Forma%C3%A7%C3%A3o-5.0?type=design&node-id=529-9727&mode=design&t=Yo984RS7Qxftwlbn-0)
+- Organização da SQUAD 2: [Trello](https://trello.com/b/weaLLQcC/hackathon-orangejuice)
+
+---
+
 ## Back-end:
 - Linguagem de Programação: [Python]
 - Framework: [Django][Django REST Framework][REACT.JS][django-allauth]
 - Biblioteca:[django.contrib.auth][rest_framework_simplejwt][django.core.validators][rest_framework.serializers]
 
+---
+
 ## Front-end:
 - Linguagem de Programação: [JavaScript] [HTML] [CSS]
 - Framework: [REACT.JS]
 - Biblioteca: [react-router-dom] [@testing-library/react] [ReactDOM]
-- 
+
+---
+
 ## Banco de dados, Cloud e Documentação :
 - Banco de Dados: [MySQL]
 -  Cloud: [boto3]
 -  Documentação: [drf_yasg]
--  
+
+---
+
 # Instalando Frameworks e bibliotecas
+
 ## Back-end:
 1. Instale o Python através do [python.org]
 2. Abra o terminal do Windows
@@ -104,12 +125,16 @@ Para garantir a integridade e a funcionalidade do projeto, são fornecidos teste
 
 Requisitos:
 Certifique-se de ter todas as dependências instaladas.
-##Back-end
+
+## Back-end
 ### Execute todos os testes
 `python manage.py test`
-##Front-end
+
+## Front-end
 Execute o seguinte comando para rodar os testes no seu projeto React:
-npm test
+`npm test`
+
+---
 
 # Principais Problemas Enfrentados
 
@@ -124,6 +149,8 @@ Nesta seção, destacamos alguns dos desafios que enfrentamos durante o desenvol
    - *Contexto*: Usando a biblioteca django-allauth, não conseguimos obter o token de acesso.
    - *Impacto*: Isso atrapalhou a integração entre front-end e back-end.
    - *Possíveis Soluções*: Consideramos usar a URL de login já existente e, ao clicar no botão do Google, direcionar para autenticação com o allauth. Isso pode comprometer algumas funcionalidades do aplicativo, mas para fins demonstrativos, servirá.
+
+---
 
 # Próximos Passos
 
@@ -144,13 +171,18 @@ Visto que este é um projeto relativamente curto, pensamos em algumas possíveis
    - *Objetivo*: Integração com IA para recomendações de profissionais para os recrutadores aproveitarem melhor a plataforma, oferecendo recomendações para usuários cruzando dados como: perfil profissional, experiências, tendências.
    - *Plano de Ação*: Primeiro ter um banco de dados bem estruturado, utilizar APIs que possam ser integradas. Fazer por meio da tecnologia mais adequada (Linear regression, SVM, DecisionTree ou até Deep Learning).
 
+---
+
 # Contribuições
 
 Se você estiver interessado em abordar algum dos problemas mencionados ou contribuir com ideias para os próximos passos, incentivamos ativamente sua participação. Sinta-se à vontade para criar uma issue ou enviar uma pull request.
 
+---
+
 # Agradecimentos
 
 A SQUAD-2, com os integrantes (por ordem alfabética): Felipe Siqueira, Iago Santos, Ian Périgo e Thaís Siqueira, agradecem a toda equipe do OrangeJuice e Fcamara que disponibilizaram profissionais gabaritados e muito gentis para nos acompanhar nesse processo. Ao nosso Padrinho Lucas Moreira sempre solícito e objetivo, à Fabiana Martins por desenvolver um protótipo lindo e bem organizado, e à Mariana Medanha do marketing que nos envolveu nessa hackathon como se fossemos participantes de uma jornada épica. "Toda grande caminhada começa com um simples passo" (Buda).
+
 
 
 
