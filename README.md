@@ -28,9 +28,8 @@ O site está disponível online. Você pode acessá-lo através do seguinte URL:
 
 [Orange Portfólio](https://)
 
-## Tecnologias Utilizadas
 
-# Este projeto utiliza as seguintes tecnologias:
+# Tecnologias Utilizadas:
 
 - Linguagem de Programação: [Python][JavaScript] [HTML] [CSS]
 - Framework: [Django][Django REST Framework][REACT.JS][django-allauth]
