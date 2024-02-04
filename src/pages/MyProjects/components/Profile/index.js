@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Modal from '../../../../components/Modal'
 import SuccessModal from '../../../../components/Modal/components/SuccessModal'
-import iconProfileLarge from '../../../../assets/img/icon-profile-large.png'
 import './styles.css'
 
 const Profile = ({userInfo}) => {
@@ -28,9 +27,9 @@ const closeSuccessModalFunction = () => {
 
     return (
         <div className='profile'>
-            <img className='icon-profile' src={iconProfileLarge} alt="ícone do perfil"/>
+            <img className='icon-profile' src={userInfo.imagem} alt="ícone do perfil"/>
             <div>
-            <h1 className='profile-title'>{userInfo.nome} {userInfo.sobrenome}</h1>
+            <h1 className='profile-title'>{userInfo.first_name} {userInfo.last_name}</h1>
             <h2 className='profile-subtitle'>Brasil</h2>
             <button className='button' onClick={() => openModalFunction()} >Adicionar Projeto</button>
             </div>

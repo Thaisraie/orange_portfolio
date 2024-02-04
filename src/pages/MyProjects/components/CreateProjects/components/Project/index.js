@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import iconEdit from '../../../../../../assets/img/icon-edit.png'
-import iconProfile from '../../../../../../assets/img/icon-profile.png'
 import OptionsModal from './components/OptionsModal'
 import DeleteModal from './components/OptionsModal/components/ConfirmDeleteModal/components/DeleteModal'
-import "./styles.css"
 import EditSuccessModal from './components/OptionsModal/components/EditProjectModal/components/EditSuccessModal'
+import "./styles.css"
 
 const Project = ({date, title, describe, img, link, tag, id, findId, openViewModal, userInfo}) => {
 const [openOptionsModal, setOpenOptionsModal] = useState(false)
@@ -56,8 +55,8 @@ const closeEditSuccessModalFunction = () => {
             </div>
             <div className='project-infos'>         
             <div className='project-user-infos'>       
-                <img  className='project-profile-img' src={iconProfile} alt='ícone de perfil'/>
-                <h1 className='project-name'>{userInfo.nome} {userInfo.sobrenome} • {formatDate}</h1>    
+                <img  className='project-profile-img' src={userInfo.imagem} alt='ícone de perfil'/>
+                <h1 className='project-name'>{userInfo.first_name} {userInfo.last_name} • {formatDate}</h1>    
             </div>
             <div className='project-info-tags'>
                 {tags.length <= 2 ? tags.map((tag) => 
