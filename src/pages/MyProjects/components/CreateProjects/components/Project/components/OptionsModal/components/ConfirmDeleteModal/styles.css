@@ -21,9 +21,9 @@
 }
 
 .confirm-delete-modal-container {
-    padding: 18px 80px 6px 40px;
+    padding: 32px 70px 0px 40px;
     width: 300px;
-    height: 220px;
+    height: 200px;
     background-color: #FCFDFF;
     display: flex;
     flex-direction: column;
@@ -48,11 +48,12 @@
 .confirm-delete-modal-text {
     color: #515255;
     font-size: 16px;
+    margin-top: 22px;
 }
 
 .confirm-delete-modal-btn-container {
     display: flex;
-    margin-top: -10px;
+    margin-top: 10px;
 }
 
 .confirm-delete-modal-btn {

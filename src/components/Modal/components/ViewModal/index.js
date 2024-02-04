@@ -7,6 +7,7 @@ const ViewModal = ({closeModal, title, link, describe, tags, img, date, userInfo
     const formatTag = tags.split(" ")
     const formatDate =  new Date(date).toLocaleDateString('pt-BR', {day:"numeric", month:"numeric"});
     const links = "https://" + link
+    
 
     return (
         <div className="background-view-modal">
