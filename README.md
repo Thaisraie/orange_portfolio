@@ -1,4 +1,4 @@
-# <span style="color: orange;">Orange Portfólio </span> 🍊
+# <span style="color: red;">Orange Portfólio</span> 🍊
 
 ## Índice
 
