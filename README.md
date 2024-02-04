@@ -31,14 +31,27 @@ O site está disponível online. Você pode acessá-lo através do seguinte URL:
 
 # Tecnologias Utilizadas:
 
-- Linguagem de Programação: [Python][JavaScript] [HTML] [CSS]
+## Tecnologias de organização do projeto:
+- Protótipo: [https://www.figma.com/file/utDx59m5Opz1lDSN1J4r9I/Desafio---Programa-de-Forma%C3%A7%C3%A3o-5.0?type=design&node-id=529-9727&mode=design&t=Yo984RS7Qxftwlbn-0](Figma)
+- Organização da SQUAD 2: [https://trello.com/b/weaLLQcC/hackathon-orangejuice](hackathon-orangejuice)
+- 
+## Back-end:
+- Linguagem de Programação: [Python]
 - Framework: [Django][Django REST Framework][REACT.JS][django-allauth]
-- Biblioteca: [boto3][drf_yasg][django.contrib.auth][rest_framework_simplejwt][django.core.validators][rest_framework.serializers]
+- Biblioteca:[django.contrib.auth][rest_framework_simplejwt][django.core.validators][rest_framework.serializers]
+
+## Front-end:
+- Linguagem de Programação: [JavaScript] [HTML] [CSS]
+- Framework: [REACT.JS]
+- Biblioteca: [react-router-dom] [@testing-library/react] [ReactDOM]
+- 
+## Banco de dados, Cloud e Documentação :
 - Banco de Dados: [MySQL]
-- Outras Ferramentas:
-
-# # Instalando Frameworks e bibliotecas
-
+-  Cloud: [boto3]
+-  Documentação: [drf_yasg]
+-  
+# Instalando Frameworks e bibliotecas
+## Back-end:
 1. Instale o Python através do [python.org]
 2. Abra o terminal do Windows
 3. Execute o comando `pip install` seguido do nome da biblioteca
@@ -70,15 +83,33 @@ O site está disponível online. Você pode acessá-lo através do seguinte URL:
 - google-auth:
   `pip install google-auth`
 
-## Como Rodar os Testes
+## Front-end:
+- React e React Router Dom:
+  Pré-requisitos:
+  Node.js e npm instalados. Você pode baixá-los aqui.
+  Instalação:
+  Abra o terminal na raiz do seu projeto.
+  Execute o seguinte comando para instalar as dependências:
+  npm install
+- @testing-library/react:
+  Pré-requisitos:
+  Node.js e npm instalados.
+  Instalação:
+  Execute o seguinte comando para instalar a biblioteca de teste:
+  npm install --save-dev @testing-library/react
+
+# Como Rodar os Testes
 
 Para garantir a integridade e a funcionalidade do projeto, são fornecidos testes automatizados. Siga as instruções abaixo para executar os testes.
 
 Requisitos:
 Certifique-se de ter todas as dependências instaladas.
-
-# Execute todos os testes
+##Back-end
+### Execute todos os testes
 `python manage.py test`
+##Front-end
+Execute o seguinte comando para rodar os testes no seu projeto React:
+npm test
 
 # Principais Problemas Enfrentados
 
