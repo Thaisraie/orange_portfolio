@@ -189,7 +189,7 @@ Se você estiver interessado em abordar algum dos problemas mencionados ou contr
 
 A SQUAD-2 agradece a toda equipe do OrangeJuice e Fcamara que disponibilizaram profissionais gabaritados e muito gentis para nos acompanhar nesse processo. Ao nosso Padrinho Lucas Moreira sempre solícito e objetivo, à Fabiana Martins por desenvolver um protótipo lindo e bem organizado, e à Mariana Medanha do marketing que nos envolveu nessa hackathon como se fossemos participantes de uma jornada épica. 
 
-##🧡<span style="color: orange;">"Toda grande caminhada começa com um simples passo" (Buda).</span> 🍊
+## 🧡<span style="color: orange;">"Toda grande caminhada começa com um simples passo" (Buda).</span> 🍊
 
 
 
