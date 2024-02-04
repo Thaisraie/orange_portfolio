@@ -178,10 +178,18 @@ Visto que este é um projeto relativamente curto, pensamos em algumas possíveis
 Se você estiver interessado em abordar algum dos problemas mencionados ou contribuir com ideias para os próximos passos, incentivamos ativamente sua participação. Sinta-se à vontade para criar uma issue ou enviar uma pull request.
 
 ---
+# Integrantes (por ordem alfabética): 
+
+- [Felipe Siqueira](https://github.com/Fesids)([LinkedIn](https://www.linkedin.com/in/linkedin-felipe-siqueira/))
+- [Iago Santos](https://github.com/iagoreal)([LinkedIn](https://www.linkedin.com/in/iago-dos-santos-vila-real-4513aa255/)
+- [Ian Périgo](https://github.com/IanPerigoVianna)([LinkedIn](https://www.linkedin.com/in/ianperigo)
+- [Thaís Siqueira](https://github.com/Thaisraie)([LinkedIn](https://www.linkedin.com/in/thaisqusi/)
 
 # Agradecimentos
 
-A SQUAD-2, com os integrantes (por ordem alfabética): Felipe Siqueira, Iago Santos, Ian Périgo e Thaís Siqueira, agradecem a toda equipe do OrangeJuice e Fcamara que disponibilizaram profissionais gabaritados e muito gentis para nos acompanhar nesse processo. Ao nosso Padrinho Lucas Moreira sempre solícito e objetivo, à Fabiana Martins por desenvolver um protótipo lindo e bem organizado, e à Mariana Medanha do marketing que nos envolveu nessa hackathon como se fossemos participantes de uma jornada épica. "Toda grande caminhada começa com um simples passo" (Buda).
+A SQUAD-2 agradece a toda equipe do OrangeJuice e Fcamara que disponibilizaram profissionais gabaritados e muito gentis para nos acompanhar nesse processo. Ao nosso Padrinho Lucas Moreira sempre solícito e objetivo, à Fabiana Martins por desenvolver um protótipo lindo e bem organizado, e à Mariana Medanha do marketing que nos envolveu nessa hackathon como se fossemos participantes de uma jornada épica. 
+
+##🧡<span style="color: orange;">"Toda grande caminhada começa com um simples passo" (Buda).</span> 🍊
 
 
 
