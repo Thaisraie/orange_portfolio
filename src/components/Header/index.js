@@ -30,19 +30,12 @@ const Header = ({userInfo}) => {
         setOpenDropdown(!openDropdown)
     }
 
-    const logout = async () => {
-    await axios.post("http://3.239.251.235:8000/api/v1/usuarios/logout").then(() => {
-        localStorage.removeItem("usersToken")
-        navigate("/")
-    })
-    }
-
     return (
         <div className='header'>
             <div className='header-icon-container'>
             <img className='header-menu' src={iconMenu} alt='Menu Hamburguer' onClick={openDropdownMobileFunction}/>
             <img className='header-icon' src={iconHeader} alt="ícone"/>
-            {openDropdownMobile === true ? <DropdownMobile userInfo={userInfo} logout={logout}/> : null}
+            {openDropdownMobile === true ? <DropdownMobile userInfo={userInfo}/> : null}
             </div>
             <div className='container-title' >
             <h1 className='header-title' onClick={() => redirectToMyProjects()}>Meus Projetos</h1>
@@ -50,7 +43,7 @@ const Header = ({userInfo}) => {
             </div>
             <div className='container-icons' >
             <img className='profile-icon' src={userInfo.imagem} alt='ícone perfil' onClick={() => openDropdownFunction()}/>
-            {openDropdown === true ? <Dropdown userInfo={userInfo} logout={logout}/> : null}
+            {openDropdown === true ? <Dropdown userInfo={userInfo}/> : null}
             <img className='icon-notification' src={iconNotification} alt='ícone notificação'/>
             </div>
         </div>

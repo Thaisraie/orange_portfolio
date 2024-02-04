@@ -1,8 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-* {
-    font-family: Roboto;
-}
 
 .dropdown {
     width: 220px;
@@ -45,7 +40,6 @@
     align-items: center;
     padding: 14px 12px;
     cursor: pointer;
-
 }
 
 .exit-content-dropdown:hover {

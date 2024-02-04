@@ -1,5 +1,5 @@
 import {useState } from 'react'
-import ViewModal from './components/ViewModal'
+import ViewModal from '../ViewModal'
 import IconImg from '../../assets/img/icon-img.png'
 import './styles.css'
 import axios from 'axios'

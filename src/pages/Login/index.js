@@ -1,6 +1,7 @@
 import './styles.css'
 import imgLogin from '../../assets/img/img_login.png'
 import FormLogin from './components/FormLogin'
+import Footer from '../../components/Footer'
 
 const Login = () => {
     return (
@@ -11,6 +12,7 @@ const Login = () => {
                 <div className='container-form-login'>
             <FormLogin/>
             </div>
+            <Footer/>
             </div>
     )
 }
