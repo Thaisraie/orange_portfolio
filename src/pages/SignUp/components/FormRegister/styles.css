@@ -118,8 +118,8 @@
     color: #515255;
 
     @media (max-width: 540px) {
-        margin-top: 61px;
-        margin-left: 16px;
+        margin-top: 62px;
+        margin-left: 12px;
     }
 }
 
@@ -136,11 +136,8 @@
     background-color: white;
     color: #515255;
 
-    @media (max-width: 768px) {
-        margin-top: 29px; 
-    }
     @media (max-width: 540px) {
-        margin-top: 49px;
+        margin-top: 18px;
     }
 }
 
@@ -157,11 +154,8 @@
     background-color: white;
     color: #515255;
 
-    @media (max-width: 768px) {
-        margin-top: 28px; 
-    }
     @media (max-width: 540px) {
-        margin-top: 48px;
+        margin-top: 16px;
     }
 }
 
@@ -179,8 +173,99 @@
     background: #FF5522;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.20), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     color: #FCFDFF;
+    outline: none;
+    transition: 0.5s;
 
     @media (max-width: 540px) {
         width: 97%;
     }
+}
+
+.btn_register_register:hover {
+    background: #222244;
+}
+
+.edit-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-edit-img {
+    color: #222244;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.edit-img {
+    margin-top: 12px;
+}
+
+.logo-img-user {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0.8;
+    cursor: pointer;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    object-fit: cover;
+}
+
+.logo-img-user:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.logo-img {
+    width: 150px;
+    opacity: 0.8;
+    cursor: pointer;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.logo-img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.edit-img-btn-container {
+    margin-top: 20px;
+    width: 517px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-img-btn {
+    width: 32vw;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    padding: 12px 22px;
+    font-size: 15px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border:none;
+    background: #FF5522;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.20), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    color: #FCFDFF;
+    transition: 0.5s;
+
+    @media (max-width: 540px) {
+        width: 80vw;
+    }
+}
+
+.edit-img-btn:hover {
+    background: #222244;
 }

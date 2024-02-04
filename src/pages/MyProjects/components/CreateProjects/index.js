@@ -15,9 +15,6 @@ const [openViewModal, setOpenViewModal] = useState(false)
 const [projectId, setProjectId] = useState({})
 const [search, setSearch] = useState("")
 
-const userId = userInfo.id
-
-
 const openModalFunction = () => {
     setOpenModal(true)
 }
@@ -48,10 +45,12 @@ const findId = (id) => {
 }
 
 useEffect(() => {
-    axios.get(`http://3.239.251.235:8000/api/v1/portfolios/usuario/${userId}`).then((response) => {
+    if(userInfo.id){
+    axios.get(`http://3.239.251.235:8000/api/v1/portfolios/usuario/${userInfo.id}`).then((response) => {
         setProjects(response.data)
 })
-},[userId])
+}
+},[userInfo.id])
 
 const sortProjects = projects.length && projects.sort((a, b) => {
     if(a.criado_em > b.criado_em) {
@@ -71,7 +70,7 @@ const searchProjects = searchTags(search)
             <h1 className='my-projects-title'>Meus projetos</h1>
             <input className='input' type='text' placeholder='Buscar tags' value={search} onChange={(e) => setSearch(e.target.value)} />
             <div className='my-projects-container'>
-            {projects.length ? searchProjects.map((project) => (<Project date={project.criado_em} title={project.titulo} describe={projectId.descricao} img={project.imagem} tag={project.tags} link={projectId.link} id={project.id} findId={findId} openViewModal={openViewModalFunction} userInfo={userInfo}/>)): 
+            {projects.length ? searchProjects.map((project) => (<Project key={`${project.id}-project`} date={project.criado_em} title={project.titulo} describe={projectId.descricao} img={project.imagem} tag={project.tags} link={projectId.link} id={project.id} findId={findId} openViewModal={openViewModalFunction} userInfo={userInfo}/>)): 
             <div className='box-img-container' onClick={() => openModalFunction()}>
                 <img src={IconImg} alt='ícone de arquivo'/>
                 <div className='text-container'>

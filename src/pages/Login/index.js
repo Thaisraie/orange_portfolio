@@ -2,7 +2,7 @@ import './styles.css'
 import imgLogin from '../../assets/img/img_login.png'
 import FormLogin from './components/FormLogin'
 
-export default function Login(){
+const Login = () => {
     return (
             <div className="conteiner">
                 <div className='container-img-login'>
@@ -14,3 +14,5 @@ export default function Login(){
             </div>
     )
 }
+
+export default Login;

@@ -41,6 +41,16 @@
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+.google-img {
+    width: 22px;
+    margin-right: -14px;
+}
+
+.button_google:hover{
+    background-color: #d4d4d4bb;
 }
 
 .text_login_container {
@@ -131,10 +141,15 @@
     background: #FF5522;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.20), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     color: #FCFDFF;
+    transition: 0.5s;
 
     @media (max-width: 540px) {
         width: 97%;
     }
+}
+
+.btn_entrar:hover {
+    background: #222244;
 }
 
 .registrar_btn_container{
@@ -152,4 +167,9 @@
     color: #818388;
     text-decoration: none;
     font-size: 16px;
+    transition: 0.5s;
+}
+
+.registrar_btn:hover {
+    color: #FF5522;
 }

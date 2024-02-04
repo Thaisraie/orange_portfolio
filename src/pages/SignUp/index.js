@@ -2,7 +2,7 @@ import './styles.css'
 import imgLogin from '../../assets/img/img_cadastro.png'
 import FormRegister from './components/FormRegister'
 
-export default function SignUp (){
+const SignUp = () => {
 
     return (
             <div className="conteiner-register">
@@ -14,4 +14,7 @@ export default function SignUp (){
             </div>
             </div>
     )
-    }
+}
+
+export default SignUp;
+

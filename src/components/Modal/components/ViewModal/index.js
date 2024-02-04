@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import iconUser from '../../../../assets/img/icon-profile.png'
 import iconClose from '../../../../assets/img/icon-close.png'
 import './styles.css'
 
@@ -18,9 +17,9 @@ const ViewModal = ({closeModal, title, link, describe, tags, img, date, userInfo
             <img className='icon-close' src={iconClose} alt='ícone de fechar' onClick={() => closeModal()}/>
             </div> 
                 <div className='user-info'>
-                    <img  className='user-img' src={iconUser} alt='ícone do usuário'/>
+                    <img  className='user-img' src={userInfo.imagem} alt='ícone do usuário'/>
                     <div className='info-column' >
-                    <h2 className='user-name'>{userInfo.nome} {userInfo.sobrenome}</h2>
+                    <h2 className='user-name'>{userInfo.first_name} {userInfo.last_name}</h2>
                     <h3 className='date'>{formatDate}</h3>
                     </div>
                     </div>  
@@ -40,9 +39,9 @@ const ViewModal = ({closeModal, title, link, describe, tags, img, date, userInfo
             <div className='container-mobile'>
             <div className='user-info-mobile'>
                     <div className='user-info-row-mobile'>
-                    <img  className='user-img-mobile' src={iconUser} alt='ícone do usuário'/>
+                    <img  className='user-img-mobile' src={userInfo.imagem} alt='ícone do usuário'/>
                     <div className='info-column-mobile'>
-                    <h2 className='user-name-mobile'>{userInfo.nome} {userInfo.sobrenome}</h2>
+                    <h2 className='user-name-mobile'>{userInfo.first_name} {userInfo.last_name}</h2>
                     <h3 className='date-mobile'>{formatDate}</h3>
                     </div>
                     </div>
