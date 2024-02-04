@@ -49,9 +49,15 @@ const FormRegister = () => {
 
         await axios.post("http://3.239.251.235:8000/api/v1/usuarios/signup", formData).then(() =>  {
             toast.success('Usuário cadastrado com sucesso!')
-            setTimeout(() => {
-                navigate('/')
-            }, 4000)
+            const formDataLogin = new FormData();
+                formDataLogin.append('email', value.email);
+                formDataLogin.append('password', value.password);
+                setTimeout( async () => {
+                    await axios.post("http://3.239.251.235:8000/api/v1/usuarios/login", formDataLogin).then((response) => {
+                    localStorage.setItem("usersToken", response.data.access_token)
+                    navigate("/myprojects")
+                    })
+                }, 3000)
         })
     }
 
