@@ -114,27 +114,14 @@ O site está disponível online. Você pode acessá-lo através do seguinte URL:
   Abra o terminal na raiz do seu projeto.
   Execute o seguinte comando para instalar as dependências:
   npm install
-- @testing-library/react:
-  Pré-requisitos:
-  Node.js e npm instalados.
-  Instalação:
-  Execute o seguinte comando para instalar a biblioteca de teste:
-  npm install --save-dev @testing-library/react
 
 # Como Rodar os Testes
 
 Para garantir a integridade e a funcionalidade do projeto, são fornecidos testes automatizados. Siga as instruções abaixo para executar os testes.
 
-Requisitos:
-Certifique-se de ter todas as dependências instaladas.
-
 ## Back-end
 ### Execute todos os testes
 `python manage.py test`
-
-## Front-end
-Execute o seguinte comando para rodar os testes no seu projeto React:
-`npm test`
 
 ---
 
@@ -150,7 +137,7 @@ Nesta seção, destacamos alguns dos desafios que enfrentamos durante o desenvol
 2. **Problema 2: Obtenção do token de acesso ao logar via Google ou GitHub com a biblioteca**
    - *Contexto*: Usando a biblioteca django-allauth, não conseguimos obter o token de acesso.
    - *Impacto*: Isso atrapalhou a integração entre front-end e back-end.
-   - *Possíveis Soluções*: Consideramos usar a URL de login já existente e, ao clicar no botão do Google, direcionar para autenticação com o allauth. Isso pode comprometer algumas funcionalidades do aplicativo, mas para fins demonstrativos, servirá.
+   - *Possíveis Soluções*: Consideramos usar a URL de login já existente e remover o botão do Google pois continuar com o botão estava comprometendo o funcionamento da nossa aplicação.
 
 ---
 
