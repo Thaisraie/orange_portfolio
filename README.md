@@ -109,7 +109,7 @@ O site está disponível online. Você pode acessá-lo através do seguinte URL:
 ## Front-end:
 - React e React Router Dom:
   Pré-requisitos:
-  Node.js e npm instalados. Você pode baixá-los aqui.
+  Node.js e npm instalados.
   Instalação:
   Abra o terminal na raiz do seu projeto.
   Execute o seguinte comando para instalar as dependências:
