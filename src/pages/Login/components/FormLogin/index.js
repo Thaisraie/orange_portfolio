@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import logoGoogle from '../../../../assets/img/icon-google.png'
 import './styles.css'
 import axios from 'axios'
-import { useGoogleLogin } from '@react-oauth/google'
 
 const FormLogin = () => {
     const navigate = useNavigate()
@@ -32,20 +30,9 @@ const handleChange = (e) => {
 }
   }
 
-  const responseGoogle = useGoogleLogin({
-    onSuccess: (res) => { 
-        localStorage.setItem("usersTokenGoogle", res.access_token)
-        navigate("/myprojects")
-  }
-  })
-
     return(
         <div className='login_form_container'>
         <h1 className="title_login">Entre no Orange Portfólio</h1>
-        <button className="button_google" onClick={responseGoogle}>
-            <img className='google-img' src={logoGoogle} alt='icone google'/>
-           Entrar com Google
-        </button>
         <div className='text_login_container'>
         <p className="text_login">Faça login com email</p>
         </div>
