@@ -1,5 +1,3 @@
-
-import { useEffect } from "react"
 import "./styles.css"
 
 const Project = ({date, id, img, tag, openViewModal, findId, usuarioID, users}) => {

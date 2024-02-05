@@ -6,7 +6,6 @@ import axios from 'axios';
 
 const MyProject = () => {
   const token = localStorage.getItem("usersToken")
-  const tokenGoogle = localStorage.getItem("usersTokenGoogle")
   const [userInfo, setUserInfo] = useState({
     first_name: "",
     last_name: "",
@@ -24,26 +23,7 @@ const MyProject = () => {
     ).then((response) => setUserInfo(response.data))
   }
 
-  if(tokenGoogle) {
-    axios
-    .get(`https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${tokenGoogle}`, {
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${tokenGoogle}`
-      }
-    })
-    .then((response) => {
-      const formatId = response.data.id.substr(0,5)
-        setUserInfo({
-          first_name: response.data.given_name,
-          last_name: response.data.family_name,
-          email: response.data.email,
-          imagem: response.data.picture,
-          id: parseInt(formatId),
-        });
-      });
-  }
-  }, [token, tokenGoogle])
+  }, [token])
 
     return (
       <>

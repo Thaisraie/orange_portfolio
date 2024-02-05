@@ -5,7 +5,7 @@ position: absolute;
 box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.37);
 top: 73px;
 left: 0px;
-height: 213px;
+height: 201px;
 border-bottom-left-radius: 4px;
 border-bottom-right-radius: 4px;
 }
@@ -30,7 +30,7 @@ border-bottom-right-radius: 4px;
 }
 
 .pages-dropdown-mobile {
-    padding: 14px 16px;
+    padding: 0px 16px 16px;
     border-bottom: 1px solid rgb(216, 216, 216);
 }
 

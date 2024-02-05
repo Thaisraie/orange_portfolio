@@ -54,7 +54,7 @@ const savePost = async () => {
                 <div className='column-container'>
                 <div className='first-column'>
                 <p className='subtitle-modal'>Selecione o conteúdo que você deseja fazer upload</p>
-                <img className='img-file' alt='Imagem do Projeto' src={img}/>
+                <img className='img-file-edit' alt='Imagem do Projeto' src={img}/>
                 </div>
                 <div className='second-column' >
                 <input className='input-modal' type='text' name='title' value={value.title} onChange={handleChange} placeholder='Título'/>

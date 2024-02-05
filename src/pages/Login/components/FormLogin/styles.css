@@ -17,39 +17,10 @@
     }
 }
 
-.button_google{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
-    height: 40px;
-    gap: 24px;
-    background-color: #FFFFFF;
-    padding: 11px;
-    border: none;
-    outline: none; 
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 0px 3px 0 #00000020;
-    color: #0000008A;
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 30px;
-    transition: 0.5s;
-}
-
-.google-img {
-    width: 22px;
-    margin-right: -14px;
-}
-
-.button_google:hover{
-    background-color: #d4d4d4bb;
-}
 
 .text_login_container {
     width: 517px;
-    margin-bottom: 20px;
+    margin: 28px 0;
 
     @media (max-width: 540px) {
         width: 90%;
