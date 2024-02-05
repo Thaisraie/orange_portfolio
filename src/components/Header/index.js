@@ -6,7 +6,6 @@ import './styles.css'
 import { useState } from 'react'
 import DropdownMobile from './components/DropdownMobile'
 import Dropdown from './components/Dropdown'
-import axios from 'axios'
 
 
 const Header = ({userInfo}) => {

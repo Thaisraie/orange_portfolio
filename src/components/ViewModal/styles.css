@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 23%;
+    margin-top: 18%;
     width: 100%;
 
     @media (max-width: 768px) {
