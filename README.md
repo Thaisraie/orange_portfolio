@@ -69,7 +69,7 @@ O site está disponível online. Você pode acessá-lo através do seguinte URL:
 - Banco de Dados: [MySQL]
 -  Cloud: [boto3]
 -  Documentação: [drf_yasg]
-
+- Serviços Cloud: [EC2] [RDS] [S3] [SNS]
 ---
 
 # Instalando Frameworks e bibliotecas
@@ -134,10 +134,10 @@ Nesta seção, destacamos alguns dos desafios que enfrentamos durante o desenvol
    - *Impacto*: Perdemos alguns dias até que a parte do back-end de Login e Registro estivesse totalmente finalizada.
    - *Possíveis Soluções*: Migramos para a biblioteca [django-allauth].
 
-2. **Problema 2: Obtenção do token de acesso ao logar via Google ou GitHub com a biblioteca**
+2. **Problema 2: Obtenção do token de acesso ao logar via Google ou GitHub com a biblioteca Django-Allauth**
    - *Contexto*: Usando a biblioteca django-allauth, não conseguimos obter o token de acesso.
    - *Impacto*: Isso atrapalhou a integração entre front-end e back-end.
-   - *Possíveis Soluções*: Consideramos usar a URL de login já existente e remover o botão do Google pois continuar com o botão estava comprometendo o funcionamento da nossa aplicação.
+   - *Possíveis Soluções*: Comentamos essa parte do código pois levaria mais tempo para implementar a função, removemos o botão de login do google que fazia parte do protótipo para não confundir o usuário.
 
 ---
 
@@ -176,7 +176,7 @@ Se você estiver interessado em abordar algum dos problemas mencionados ou contr
 
 # Agradecimentos
 
-A SQUAD-2 agradece a toda equipe do OrangeJuice e Fcamara que disponibilizaram profissionais gabaritados e muito gentis para nos acompanhar nesse processo. Ao nosso Padrinho Lucas Moreira sempre solícito e objetivo, à Fabiana Martins por desenvolver um protótipo lindo e bem organizado, e à Mariana Medanha do marketing que nos envolveu nessa hackathon como se fossemos participantes de uma jornada épica. 
+A SQUAD-2 agradece a toda equipe do OrangeJuice e Fcamara que disponibilizaram profissionais gabaritados e muito gentis para nos acompanhar nesse processo. Ao nosso Padrinho Lucas Moreira sempre solícito e objetivo, à Fabiana Martins por desenvolver um protótipo lindo e bem organizado, e à Mariana Medanha do marketing que nos envolveu nessa hackathon como uma jornada épica. 
 
 ## 🧡"Toda grande caminhada começa com um simples passo" (Buda).🍊
 
