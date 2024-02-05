@@ -169,7 +169,7 @@ Se você estiver interessado em abordar algum dos problemas mencionados ou contr
 ---
 # Integrantes (por ordem alfabética): 
 
-- [Felipe Siqueira](https://github.com/Fesids)([LinkedIn](https://www.linkedin.com/in/linkedin-felipe-siqueira/))
+- [Felipe Siqueira](https://github.com/Fesids)[LinkedIn]
 - [Iago Santos](https://github.com/iagoreal)([LinkedIn](https://www.linkedin.com/in/iago-dos-santos-vila-real-4513aa255/))
 - [Ian Périgo](https://github.com/IanPerigoVianna)([LinkedIn](https://www.linkedin.com/in/ianperigo))
 - [Thaís Siqueira](https://github.com/Thaisraie)([LinkedIn](https://www.linkedin.com/in/thaisqusi/))
