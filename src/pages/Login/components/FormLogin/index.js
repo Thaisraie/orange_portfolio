@@ -18,8 +18,9 @@ const handleChange = (e) => {
         [e.target.name]:e.target.value
     })
 }
-  const login = async () => {
+  const login = async (e) => {
     if(value.email && value.password) {
+        e.preventDefault()
     const formData = new FormData();
     formData.append('email', value.email);
     formData.append('password', value.password);
@@ -48,13 +49,13 @@ const handleChange = (e) => {
         <div className='text_login_container'>
         <p className="text_login">Faça login com email</p>
         </div>
-            <div className="form_login">
+            <form className="form_login" action="" onSubmit={login}>
                 <label className="label_email">Email address</label>
                 <input className="input_login" type='email' name='email' value={value.email} onChange={handleChange} required/>
                 <label className="label_password">Password</label>
                 <input className="input_login" type='password' name='password' value={value.password} onChange={handleChange} required/>
-                <button className="btn_entrar" onClick={() => login()}>Entrar</button>
-           </div>
+                <button className="btn_entrar" onClick={login}>Entrar</button>
+           </form>
            <div className="registrar_btn_container">
            <Link className="registrar_btn" to={'/signup'}>Cadastre-se</Link>
            </div>
