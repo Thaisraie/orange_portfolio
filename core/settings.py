@@ -2,6 +2,7 @@
 from pathlib import Path
 from datetime import timedelta
 import os
+from allauth.account import app_settings as allauth_settings
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -53,10 +54,13 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
     
+   
+    
     
     
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',
     'rest_framework_swagger',
     'drf_yasg',
 ]
@@ -73,8 +77,9 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     
      #allauth
-    "allauth.account.middleware.AccountMiddleware",
-    "django.contrib.sites.middleware.CurrentSiteMiddleware"
+    #'allauth.account.auth_backends.AuthenticationBackend',
+    "django.contrib.sites.middleware.CurrentSiteMiddleware",
+    "allauth.account.middleware.AccountMiddleware"
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -90,6 +95,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+               
             ],
         },
     },
@@ -105,12 +111,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'orange',
-        #'NAME': 'teste',
         'USER': 'root',
         'PASSWORD': '67890000',
         'PORT': '3306',
         'HOST': 'orange-db.cfsegmqacpmx.us-east-1.rds.amazonaws.com'
-        #'HOST': 'localhost'
+        
     }
 }
 
@@ -338,3 +343,5 @@ ACCOUNT_FORMS = {
 
 #aviso do MySQL restrição única
 SILENCED_SYSTEM_CHECKS = ["models.W036"]
+
+
