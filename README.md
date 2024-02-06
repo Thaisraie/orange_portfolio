@@ -69,7 +69,7 @@ O site está disponível online. Você pode acessá-lo através do seguinte URL:
 - Banco de Dados: [MySQL]
 -  Cloud: [boto3]
 -  Documentação: [drf_yasg]
-
+- Serviços Cloud: [EC2] [RDS] [S3] [SNS]
 ---
 
 # Instalando Frameworks e bibliotecas
@@ -109,32 +109,19 @@ O site está disponível online. Você pode acessá-lo através do seguinte URL:
 ## Front-end:
 - React e React Router Dom:
   Pré-requisitos:
-  Node.js e npm instalados. Você pode baixá-los aqui.
+  Node.js e npm instalados.
   Instalação:
   Abra o terminal na raiz do seu projeto.
   Execute o seguinte comando para instalar as dependências:
   npm install
-- @testing-library/react:
-  Pré-requisitos:
-  Node.js e npm instalados.
-  Instalação:
-  Execute o seguinte comando para instalar a biblioteca de teste:
-  npm install --save-dev @testing-library/react
 
 # Como Rodar os Testes
 
 Para garantir a integridade e a funcionalidade do projeto, são fornecidos testes automatizados. Siga as instruções abaixo para executar os testes.
 
-Requisitos:
-Certifique-se de ter todas as dependências instaladas.
-
 ## Back-end
 ### Execute todos os testes
 `python manage.py test`
-
-## Front-end
-Execute o seguinte comando para rodar os testes no seu projeto React:
-`npm test`
 
 ---
 
@@ -147,10 +134,10 @@ Nesta seção, destacamos alguns dos desafios que enfrentamos durante o desenvol
    - *Impacto*: Perdemos alguns dias até que a parte do back-end de Login e Registro estivesse totalmente finalizada.
    - *Possíveis Soluções*: Migramos para a biblioteca [django-allauth].
 
-2. **Problema 2: Obtenção do token de acesso ao logar via Google ou GitHub com a biblioteca**
+2. **Problema 2: Obtenção do token de acesso ao logar via Google ou GitHub com a biblioteca Django-Allauth**
    - *Contexto*: Usando a biblioteca django-allauth, não conseguimos obter o token de acesso.
    - *Impacto*: Isso atrapalhou a integração entre front-end e back-end.
-   - *Possíveis Soluções*: Consideramos usar a URL de login já existente e, ao clicar no botão do Google, direcionar para autenticação com o allauth. Isso pode comprometer algumas funcionalidades do aplicativo, mas para fins demonstrativos, servirá.
+   - *Possíveis Soluções*: Comentamos essa parte do código pois levaria mais tempo para implementar a função, removemos o botão de login do google que fazia parte do protótipo para não confundir o usuário.
 
 ---
 
@@ -182,14 +169,14 @@ Se você estiver interessado em abordar algum dos problemas mencionados ou contr
 ---
 # Integrantes (por ordem alfabética): 
 
-- [Felipe Siqueira](https://github.com/Fesids)([LinkedIn](https://www.linkedin.com/in/linkedin-felipe-siqueira/))
+- [Felipe Siqueira](https://github.com/Fesids)([LinkedIn](https://www.linkedin.com/in/felipe-siqueira-de-sousa-28a5951b5))
 - [Iago Santos](https://github.com/iagoreal)([LinkedIn](https://www.linkedin.com/in/iago-dos-santos-vila-real-4513aa255/))
 - [Ian Périgo](https://github.com/IanPerigoVianna)([LinkedIn](https://www.linkedin.com/in/ianperigo))
 - [Thaís Siqueira](https://github.com/Thaisraie)([LinkedIn](https://www.linkedin.com/in/thaisqusi/))
 
 # Agradecimentos
 
-A SQUAD-2 agradece a toda equipe do OrangeJuice e Fcamara que disponibilizaram profissionais gabaritados e muito gentis para nos acompanhar nesse processo. Ao nosso Padrinho Lucas Moreira sempre solícito e objetivo, à Fabiana Martins por desenvolver um protótipo lindo e bem organizado, e à Mariana Medanha do marketing que nos envolveu nessa hackathon como se fossemos participantes de uma jornada épica. 
+A SQUAD-2 agradece a toda equipe do OrangeJuice e Fcamara que disponibilizaram profissionais gabaritados e muito gentis para nos acompanhar nesse processo. Ao nosso Padrinho Lucas Moreira sempre solícito e objetivo, à Fabiana Martins por desenvolver um protótipo lindo e bem organizado, e à Mariana Medanha do marketing que nos envolveu nessa hackathon como uma jornada épica. 
 
 ## 🧡"Toda grande caminhada começa com um simples passo" (Buda).🍊
 
