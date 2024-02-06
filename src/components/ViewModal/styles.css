@@ -172,7 +172,7 @@
 
     @media (max-width: 768px) {
         margin-left: 0px;
-        margin-top: 0px;
+        margin-top: 18px;
     }
 }
 
@@ -280,4 +280,5 @@ body::-webkit-scrollbar, .view-modal-container::-webkit-scrollbar {
     align-items: center;
     display: flex;
     justify-content: center;
+    
 }

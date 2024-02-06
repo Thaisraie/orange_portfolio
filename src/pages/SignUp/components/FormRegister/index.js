@@ -19,6 +19,7 @@ const FormRegister = () => {
     })
     const [fileImg, setFileImg] = useState("")
     const [urlFileImg, setUrlFileImg] = useState("")
+    const [openAlert, setOpenAlert] = useState(false)
 
     const handleChange = (e) => {
         setValue({
@@ -34,8 +35,12 @@ const FormRegister = () => {
         }
     }
 
-    const continueRegister = () => {
-        if(value.last_name && value.first_name && value.email && value.password) {
+    const continueRegister = (e) => {
+        e.preventDefault()
+        if(value.password.length < 9) {
+            alert("A senha deve ter no mínimo 8 caracteres. \nA senha deve conter pelo menos um caractere especial.\nA senha deve incluir pelo menos um número. \nA senha deve conter tanto letras maiúsculas quanto minúsculas. \nEvite senhas muito comuns ou fáceis de adivinhar.")
+        }
+        if(value.password.length >= 8 && 8 && value.last_name && value.first_name && value.email) {
             setEditUserImg(true)
     }}
 
@@ -61,6 +66,11 @@ const FormRegister = () => {
         })
     }
 
+    const openAlertFunction = () => {
+        setOpenAlert(true)
+    }
+
+
     return !editUserImg ? (
         <div className='register_form_container'>
              <ToastContainer />
@@ -77,11 +87,15 @@ const FormRegister = () => {
                     <input className="input_register" type='text' name='last_name' value={value.last_name} onChange={handleChange} required></input>
                 </div>
 
+                <div className='conteiner_email_register'>
                 <label className="label_email_register">Email address</label>
                 <input className="input_register" type='email' name='email' value={value.email} onChange={handleChange} required></input>
                 <label className="label_password_register">Password</label>
-                <input className="input_register" type='password' name='password' value={value.password} onChange={handleChange} required></input>
-                <button className="btn_register_register" onClick={() => continueRegister()}>Cadastrar</button>
+                <input className="input_register" type='password' name='password' value={value.password} 
+                onChange={handleChange} onClick={() => openAlertFunction()} required></input>
+                {openAlert && value.password.length === 0 ? alert("A senha deve ter no mínimo 8 caracteres. \nA senha deve conter pelo menos um caractere especial.\nA senha deve incluir pelo menos um número. \nA senha deve conter tanto letras maiúsculas quanto minúsculas. \nEvite senhas muito comuns ou fáceis de adivinhar.") : null}
+                </div>
+                <button className="btn_register_register" onClick={continueRegister}>Cadastrar</button>
            </form>
            </div>
            ) :  <div className="edit-img-container">
